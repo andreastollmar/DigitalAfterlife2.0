@@ -24,7 +24,7 @@ namespace DigitalAfterlife2._0.Pages.Portal
             
             if (check == null)
             {
-                return RedirectToPage("/Personuppgifter");
+                return RedirectToPage("/Portal/Personuppgifter");
             }
 
             return Page();
