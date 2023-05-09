@@ -1,0 +1,28 @@
+﻿@page
+@model DigitalAfterlife2._0.Pages.Portal.PortalModel
+@{
+    Layout = "_InloggningsPortal";
+}
+@if(Model.PageNr == 1)
+{
+    <div class="container text-center mt-3" style="border: 2px solid black">
+        <h1 class="display-2">Välj ett dokument att ladda upp</h1>
+        <p>Här ser du alla dokument som du ska ladda upp för att gå vidare i processen.</p>
+    </div>
+    <br />
+    <hr />
+    <hr />
+    <h2 class="fw-bold">Dödscertifikat</h2>
+    <p>Här laddar du upp den avlidnes dödscertifikat, du får den av blabla</p>
+    <a asp-page="deathcert">Mer info...</a>
+    <br />
+    <hr />
+    <h2 class="fw-bold">Fullmakt</h2>
+    <p>Här laddar du upp en fullmakt, som ger oss möjlighet att agera i erat namn.</p>
+    <a asp-page="fullmakt">Mer info...</a>
+   
+}
+else
+{
+    <p>Hej då</p>
+}

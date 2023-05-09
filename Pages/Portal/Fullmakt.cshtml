@@ -1,0 +1,22 @@
+﻿@page
+@model DigitalAfterlife2._0.Pages.Portal.FullmaktModel
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    Layout = "_InloggningsPortal";
+    var user = await UserManager.GetUserAsync(User);
+}
+
+<div class="container-fluid text-center">
+    <h1 class="display-2">Fullmakt</h1>
+    <p class="fw-bold">Ladda upp din fullmakt här</p>
+
+    <form method="post" enctype="multipart/form-data">
+        
+    <label asp-for="@Model.Files.UploadedFile" class="form-label"></label>
+    <input type="file" class="form-control" name="UploadedFullmakt" />
+    <br />
+    <input type="submit" value="Ladda upp" class="btn btn-success" />
+    
+    </form>
+</div>

@@ -1,0 +1,73 @@
+﻿@page
+@model DigitalAfterlife2._0.Pages.Admin.PerishedAdmin.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Perished</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.SocialSecurity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.SocialSecurity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.MiddleName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.MiddleName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.Surname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.Surname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.Deathcert)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.Deathcert)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.Fullmakt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.Fullmakt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perished.NextOfKin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perished.NextOfKin.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Perished?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

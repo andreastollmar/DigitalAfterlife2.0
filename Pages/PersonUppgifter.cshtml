@@ -1,0 +1,20 @@
+﻿@page
+@model DigitalAfterlife2._0.Pages.PersonUppgifterModel
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Startsida";
+    var user = await UserManager.GetUserAsync(User);
+}
+@if (SignInManager.IsSignedIn(User))
+{
+    Layout = "_InloggningsPortal";
+
+
+    <p>Du är inloggad på Personuppgifter</p>
+}
+else
+{
+    Layout = "_Layout";
+    <div class="alert alert-danger">Du är INTE inloggad!</div>
+}

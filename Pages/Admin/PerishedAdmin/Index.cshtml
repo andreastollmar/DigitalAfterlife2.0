@@ -1,0 +1,84 @@
+﻿@page
+@model DigitalAfterlife2._0.Pages.Admin.PerishedAdmin.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].SocialSecurity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].Deathcert)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].Fullmakt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perished[0].NextOfKin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Perished) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SocialSecurity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deathcert)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fullmakt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NextOfKin.Id)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
