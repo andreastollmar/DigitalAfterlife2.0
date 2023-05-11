@@ -17,10 +17,16 @@
                 @Html.DisplayNameFor(model => model.NextOfKin[0].FirstName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NextOfKin[0].MiddleName)
+                @Html.DisplayNameFor(model => model.NextOfKin[0].LastName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NextOfKin[0].Surname)
+                @Html.DisplayNameFor(model => model.NextOfKin[0].BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NextOfKin[0].SocialSecurity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NextOfKin[0].Gender)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NextOfKin[0].ZipCode)
@@ -32,10 +38,16 @@
                 @Html.DisplayNameFor(model => model.NextOfKin[0].City)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NextOfKin[0].Email)
+                @Html.DisplayNameFor(model => model.NextOfKin[0].Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NextOfKin[0].PhoneNumber)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NextOfKin[0].LoginId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NextOfKin[0].Email)
             </th>
             <th></th>
         </tr>
@@ -47,10 +59,16 @@
                 @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MiddleName)
+                @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Surname)
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SocialSecurity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ZipCode)
@@ -62,10 +80,16 @@
                 @Html.DisplayFor(modelItem => item.City)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LoginId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

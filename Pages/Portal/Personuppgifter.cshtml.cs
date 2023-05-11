@@ -14,8 +14,9 @@ namespace DigitalAfterlife2._0.Pages.Portal
             _context = context;
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
+            NextOfKin = _context.NextOfKin.Where(x => x.LoginId == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
             return Page();
         }
 
@@ -30,9 +31,23 @@ namespace DigitalAfterlife2._0.Pages.Portal
             {
                 return Page();
             }
-            NextOfKin.LoginId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            _context.NextOfKin.Add(NextOfKin);
-            await _context.SaveChangesAsync();
+            else
+            {
+                var user = _context.NextOfKin.Where(x => x.LoginId == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
+                if (user == null)
+                {
+                    NextOfKin.LoginId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    _context.NextOfKin.Add(NextOfKin);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    NextOfKin.LoginId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    _context.NextOfKin.Update(NextOfKin);
+                    await _context.SaveChangesAsync();
+                }
+            }
+
 
             return RedirectToPage("/Portal/Portal");
         }

@@ -76,4 +76,44 @@ html {
 
 body {
     margin-bottom: 60px;
+    background-image: linear-gradient(to top, #051937, #131a31, #1b1c2c, #1f1e26, #212121);
+}
+
+
+
+/*Start regform*/
+
+/*.gradient-custom {
+    background-image: linear-gradient(to right top, #051937, #002f4f, #004665, #005e78, #007789);
+}*/
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+/*Slut regform*/
+
+
+/*testar att modda en knapp*/
+.btn-jeppe {
+    background-color: #051937;
+    color: white;
+}
+.btn-jeppe:hover {
+    color: #f0f0f0;
+}
+
+/*hette från början .nav-link */
+.nav-text { 
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    
 }
