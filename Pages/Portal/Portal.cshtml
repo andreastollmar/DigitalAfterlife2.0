@@ -38,19 +38,19 @@ else
 
             if(p.Deathcert == true)
             {
-                <p>Ladda upp Dödscertifikat överstruket alt annan text</p>
+                <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Du har laddat upp dödscertifikat </p>
             }
             else
             {
-                <p>Ladda upp Dödscertifikat för personen</p>
+                <p><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e41b2f;"></i> Ladda upp dödscertifikat för @p.FirstName</p>
             }
             if(p.Fullmakt == true)
             {
-                <p>Ladda upp Fullmakt överstruket alt annan text</p>
+                <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Du har laddat upp fullmakt</p>
             }
             else
             {
-                <p>Ladda upp fullmakt för personen</p>
+                <p><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e41b2f;"></i> Ladda upp fullmakt för @p.FirstName</p>
             }
             if(p.Deathcert == true && p.Fullmakt == true)
             {
@@ -65,3 +65,4 @@ else
         <h1 class="display-3 text-center fw-bold">Du har inga pågående ärenden. Vänligen fyll i en ny omkommen</h1>
     }
 }
+<script src="https://kit.fontawesome.com/1114296e1a.js" crossorigin="anonymous"></script>
