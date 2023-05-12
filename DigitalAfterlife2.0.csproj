@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="wwwroot\content\uploads\" />
   </ItemGroup>
 
 </Project>

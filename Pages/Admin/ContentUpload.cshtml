@@ -1,0 +1,47 @@
+﻿@page
+@model DigitalAfterlife2._0.Pages.Admin.ContentUploadModel
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="container-fluid">
+    <div class="row py-3">
+        <div class="col-2" style="height: 250px; border: 2px solid aqua">
+            <div class="text-center m-2 p-4" style="background-color: palegreen">
+                <a class="adminbtn" asp-page="./ContentUpload/" asp-route-pageNr="1">Bild</a>
+            </div>
+
+            <div class="text-center m-2 p-4" style="background-color: bisque">
+                <a class="adminbtn" asp-page="./ContentUpload/" asp-route-pageNr="2">Film</a>
+            </div>
+
+            <div class="text-center m-2 p-4" style="background-color: burlywood">
+                <a class="adminbtn" asp-page="./ContentUpload/" asp-route-pageNr="3">Dokument</a>
+            </div>
+        </div>
+
+        @*Här är MAIN content area för uploads*@
+        <div class="col-8 min-vh-100" style="background-color: palegoldenrod">
+            <h1 class="display-3 text-center">MAIN CONTENT AREA</h1>
+            @if (Model.PageNr == 1)
+            {
+                <p class="fw-bold">Här laddar du upp bilder.</p>
+            }
+
+            @if (Model.PageNr == 2)
+            {
+                <p class="fw-bold">Här laddar du upp filmer.</p>
+            }
+
+            @if (Model.PageNr == 3)
+            {
+                <p class="fw-bold">Här laddar du upp dokument.</p>
+            }
+        </div>
+
+
+        <div class="col-2" style="height: 250px; border: 2px solid aqua"></div>
+    </div>
+</div>
+
+

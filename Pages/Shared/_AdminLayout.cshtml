@@ -1,8 +1,5 @@
 ﻿<!DOCTYPE html>
-
-@inject Models.NextOfKin nextOfKin
 @{
-    nextOfKin
 }
 <html>
 <head>
@@ -10,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DigitalAfterlife</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    @*<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DigitalAfterlife.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -33,17 +30,23 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid justify-content-center">
-        <div class="row">
-            <div class="" style="border: 2px solid black">
-                <ul>
-                    <li>
-                        <a asp-page="/Admin/NextOfKinAdmin/Index">Användare</a>
-                    </li>
-                    <li>
-                        <a asp-page="/Admin/PerishedAdmin/Index">Bortgången</a>
-                    </li>
-                </ul>
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="container-fluid py-2">
+                <div class="row py-3" style="border: 2px solid red">
+
+                    <div class="col text-center m-2" style="background-color: palegreen">
+                        <a class="adminbtn" asp-page="/Admin/NextOfKinAdmin/Index">Användare</a>
+                    </div>
+
+                    <div class="col text-center m-2" style="background-color: bisque">
+                        <a class="adminbtn" asp-page="/Admin/PerishedAdmin/Index">Avlidna</a>
+                    </div>
+
+                    <div class="col text-center m-2" style="background-color: burlywood">
+                        <a class="adminbtn" asp-page="/Admin/ContentUpload">Content</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
