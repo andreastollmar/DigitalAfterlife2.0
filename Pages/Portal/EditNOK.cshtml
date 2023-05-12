@@ -20,7 +20,7 @@
                             <div class="row">
                                 <div class="col-md-6 mb-2">
                                     <div class="form-outline">
-                                        <input asp-for="NextOfKin.FirstName" type="text" id="firstName" class="form-control form-control" value="@Model.NextOfKin.FirstName" disabled />
+                                        <input asp-for="NextOfKin.FirstName" type="text" id="firstName" class="form-control form-control" value="@Model.NextOfKin.FirstName" disabled readonly/>
                                         <label asp-for="NextOfKin.FirstName" class="form-label">Förnamn</label>
                                         <span asp-validation-for="NextOfKin.FirstName" class="text-danger"></span>
                                     </div>
@@ -38,14 +38,14 @@
 
                                 <div class="col-md-6 mb-3 d-flex align-items-center">
                                     <div class="form-outline datepicker w-100">
-                                        <input disabled asp-for="NextOfKin.BirthDate" value="@Model.NextOfKin.BirthDate" type="text" class="form-control form-control" id="birthdayDate" maxlength="6" placeholder="6 siffror" />
+                                        <input disabled readonly asp-for="NextOfKin.BirthDate" value="@Model.NextOfKin.BirthDate" type="text" class="form-control form-control" id="birthdayDate" maxlength="6" placeholder="6 siffror" />
                                         <label asp-for="NextOfKin.BirthDate" class="form-label">Födelsedatum</label>
                                         <span asp-validation-for="NextOfKin.BirthDate" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3 d-flex align-items-center">
                                     <div class="form-outline datepicker w-100">
-                                        <input disabled asp-for="NextOfKin.SocialSecurity" value="@Model.NextOfKin.SocialSecurity" type="text" class="form-control form-control" id="birthdayDate" maxlength="4" placeholder="4 siffror" />
+                                        <input disabled readonly asp-for="NextOfKin.SocialSecurity" value="@Model.NextOfKin.SocialSecurity" type="text" class="form-control form-control" id="birthdayDate" maxlength="4" placeholder="4 siffror" />
                                         <label asp-for="NextOfKin.SocialSecurity" class="form-label">Fyra sista</label>
                                         <span asp-validation-for="NextOfKin.SocialSecurity" class="text-danger"></span>
                                     </div>

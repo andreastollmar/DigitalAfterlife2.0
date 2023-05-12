@@ -21,6 +21,7 @@ namespace DigitalAfterlife2._0.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+
     }
 
 
