@@ -1,3 +1,4 @@
+using DigitalAfterlife2._0.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
@@ -12,7 +13,12 @@ namespace DigitalAfterlife2._0.Pages.Portal
         {
             _context = context;
         }
+
         public int? PageNr { get; set; }
+
+        public List<Perished>? Perished { get; set; }
+
+
         public IActionResult OnGet(string pageNr)
         {
             if (pageNr != null)
@@ -20,12 +26,12 @@ namespace DigitalAfterlife2._0.Pages.Portal
                 PageNr = int.Parse(pageNr);
             }
             var check = _context.NextOfKin.Where(x => x.LoginId == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
-
             
             if (check == null)
             {
                 return RedirectToPage("/Portal/Personuppgifter");
             }
+            Perished = _context.Perished.Where(x => x.NextOfKinId == check.Id).ToList();
 
             return Page();
 

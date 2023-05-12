@@ -28,5 +28,40 @@
 }
 else
 {
-    <p>Hej då</p>
+    @if(Model.Perished != null && Model.Perished.Count > 0)
+    {
+        <h1 class="display-3 text-center fw-bold">Dina pågående ärenden</h1>
+        <hr />
+        foreach(var p in Model.Perished)
+        {
+            <h3 class="fw-bold">@p.FirstName @p.Surname</h3>
+
+            if(p.Deathcert == true)
+            {
+                <p>Ladda upp Dödscertifikat överstruket alt annan text</p>
+            }
+            else
+            {
+                <p>Ladda upp Dödscertifikat för personen</p>
+            }
+            if(p.Fullmakt == true)
+            {
+                <p>Ladda upp Fullmakt överstruket alt annan text</p>
+            }
+            else
+            {
+                <p>Ladda upp fullmakt för personen</p>
+            }
+            if(p.Deathcert == true && p.Fullmakt == true)
+            {
+                <p>Invänta återkopplning från oss</p>
+            }
+        <hr />
+
+        }
+    }
+    else
+    {
+        <h1 class="display-3 text-center fw-bold">Du har inga pågående ärenden. Vänligen fyll i en ny omkommen</h1>
+    }
 }

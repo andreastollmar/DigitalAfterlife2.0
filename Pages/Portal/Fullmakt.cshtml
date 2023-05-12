@@ -24,3 +24,25 @@
     
     </form>
 </div>
+@if (Model.FilesList.Count > 0)
+{
+    <h3 class="fw-bold">Dina tidigare uppladdningar</h3>
+    <hr />
+    foreach (var file in Model.FilesList)
+    {
+        if(file.UploadedFile.Contains("fullmakt"))
+        {
+            <div class="row">
+                <div class="col-6">
+                    <p>Filnamn: @file.UploadedFile</p>
+                    <p>Datum för uppladdning: @file.DateOfUpload</p>
+                </div>
+                <div class="col-6">
+                    <a class="btn btn-primary" asp-route-deleteId="@file.Id" asp-page="Deathcert">Ta bort</a>
+                </div>
+                <hr />
+            </div>
+        }
+        
+    }
+}

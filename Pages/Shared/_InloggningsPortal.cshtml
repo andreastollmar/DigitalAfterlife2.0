@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-route-pageNr="0" asp-page="/Portal">DigitalAfterlife</a>
+                <a class="navbar-brand" asp-area="" asp-route-pageNr="" asp-page="/Portal/Portal">DigitalAfterlife</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,6 +37,12 @@
                             <div class="col-10 card shadow-2-strong" style="border-radius: 15px">
                                 <div class="card-body p-1 p-md-5">
                                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+
+                                        <li class="nav-item">
+                                            <a asp-page="/Portal/Portal" asp-route-pageNr="" class="nav-text align-middle px-0">
+                                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Översikt</span>
+                                            </a>
+                                        </li>
 
                                         <li class="nav-item">
                                             <a asp-page="/Portal/PersonUppgifter" class="nav-text align-middle px-0">
@@ -68,7 +74,7 @@
             </aside>
 
             <div class="col-lg-8 min-vh-100" style="border: 5px solid pink">
-                <div class="container-fluid">
+                <div class="container-fluid text-white">
                     @RenderBody()
                 </div>
             </div>
