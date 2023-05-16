@@ -81,7 +81,7 @@ namespace DigitalAfterlife2._0.Pages.Portal
                 if (UploadedDeathcert != null)
                 {
                     Random rnd = new();
-                    fileName = "deathcert-" + rnd.Next(0, 100000) + "-" + PerishedToSave.FirstName + PerishedToSave.Surname + "-" + UploadedDeathcert.FileName;
+                    fileName = "deathcert-" + rnd.Next(0, 100000) + "-" + PerishedToSave.FirstName + PerishedToSave.LastName + "-" + UploadedDeathcert.FileName;
                     var file = "./wwwroot/deathcert/" + fileName;
 
                     using (var fileStream = new FileStream(file, FileMode.Create))

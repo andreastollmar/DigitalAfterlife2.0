@@ -76,7 +76,7 @@ namespace DigitalAfterlife2._0.Pages.Portal
             if (PerishedToSave != null && PerishedToSave.Fullmakt != true && Files != null)
             {
                 Random rnd = new();
-                fileName = "fullmakt-" + rnd.Next(0, 100000) + "-" + PerishedToSave.FirstName + PerishedToSave.Surname + "-" + UploadedFullmakt.FileName;
+                fileName = "fullmakt-" + rnd.Next(0, 100000) + "-" + PerishedToSave.FirstName + PerishedToSave.LastName + "-" + UploadedFullmakt.FileName;
                 var file = "./wwwroot/fullmakt/" + fileName;
 
                 using (var fileStream = new FileStream(file, FileMode.Create))
