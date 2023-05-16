@@ -5,9 +5,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using DigitalAfterlife2._0.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -19,13 +21,16 @@ namespace DigitalAfterlife2._0.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<DownloadPersonalDataModel> _logger;
+        private readonly ApplicationDbContext _context;
 
         public DownloadPersonalDataModel(
             UserManager<IdentityUser> userManager,
-            ILogger<DownloadPersonalDataModel> logger)
+            ILogger<DownloadPersonalDataModel> logger,
+            ApplicationDbContext context)
         {
             _userManager = userManager;
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult OnGet()
@@ -59,6 +64,9 @@ namespace DigitalAfterlife2._0.Areas.Identity.Pages.Account.Manage
             }
 
             personalData.Add($"Authenticator Key", await _userManager.GetAuthenticatorKeyAsync(user));
+            var nextOfKin = _context.NextOfKin.Where(x => x.LoginId == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
+            var nextOfKinJson = JsonSerializer.Serialize(nextOfKin);
+            personalData.Add("NextOfKin Info", nextOfKinJson);
 
             Response.Headers.Add("Content-Disposition", "attachment; filename=PersonalData.json");
             return new FileContentResult(JsonSerializer.SerializeToUtf8Bytes(personalData), "application/json");
