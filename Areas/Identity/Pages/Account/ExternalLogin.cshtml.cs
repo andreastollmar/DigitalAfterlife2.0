@@ -21,6 +21,7 @@ using Microsoft.Extensions.Logging;
 namespace DigitalAfterlife2._0.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class ExternalLoginModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;

@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DigitalAfterlife2._0.Areas.Identity.Pages.Account
 {
+    [Authorize(Roles = "Admin")]
     public class LoginWith2faModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;

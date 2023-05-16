@@ -4,11 +4,13 @@
 
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -16,6 +18,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DigitalAfterlife2._0.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize(Roles = "Admin")]
     public class EnableAuthenticatorModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;

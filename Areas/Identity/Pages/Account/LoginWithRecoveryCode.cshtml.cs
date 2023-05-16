@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 namespace DigitalAfterlife2._0.Areas.Identity.Pages.Account
 {
+    [Authorize(Roles = "Admin")]
     public class LoginWithRecoveryCodeModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
