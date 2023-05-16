@@ -16,9 +16,24 @@ namespace DigitalAfterlife2._0
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            builder.Services.AddRazorPages();
+
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminKrav", policy => policy.RequireRole("Admin"));
+            });
+
+
+            builder.Services.AddRazorPages(options =>
+            {
+                options.Conventions.AuthorizeFolder("/Admin", "AdminKrav");
+            });
+
+            
+
+
 
             var app = builder.Build();
 
@@ -38,7 +53,7 @@ namespace DigitalAfterlife2._0
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapRazorPages();
