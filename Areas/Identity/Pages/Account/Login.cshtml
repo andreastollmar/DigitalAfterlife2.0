@@ -14,12 +14,12 @@
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                 <div class="form-floating mb-3">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="namn@example.com" />
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true"  />
                     <label asp-for="Input.Email" class="form-label text-dark">Email</label>
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="lösenord" />
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true"  />
                     <label asp-for="Input.Password" class="form-label text-dark">Lösenord</label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
@@ -43,11 +43,6 @@
             </form>
         </section>
     </div>
-    @*    <div class="col-md-6 col-md-offset-2">
-    <section>
-
-    </section>
-    </div>*@
 </div>
 
 @section Scripts {

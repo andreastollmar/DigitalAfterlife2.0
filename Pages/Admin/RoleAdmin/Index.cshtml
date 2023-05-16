@@ -15,24 +15,6 @@
     </div>
 }
 
-
-<div>
-    @if (Model.IsAdmin)
-    {
-        <p class="alert alert-danger">Det här får bara admin se</p>
-    }
-
-    @if (Model.IsUser)
-    {
-        <p class="alert alert-success">Det här får bara användare se</p>
-    }
-
-
-
-</div>
-
-
-
 <div>
     <h3>Befintliga Användare:</h3>
     @if (@Model.Users != null)
