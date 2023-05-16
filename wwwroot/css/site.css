@@ -1,3 +1,24 @@
+/*font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'PT Sans', sans-serif;*/
+p {
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -75,8 +96,7 @@ html {
 }
 
 body {
-    margin-bottom: 60px;
-    background-image: linear-gradient(to top, #051937, #131a31, #1b1c2c, #1f1e26, #212121);
+    background-image: linear-gradient(to bottom, #212121, #131a31, #1b1c2c, #1f1e26, #051937 );
 }
 
 
@@ -115,4 +135,18 @@ body {
     text-decoration: none;
     color: black;
     font-size: 1.2em;  
+}
+
+.navbar-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+.footer {
+    height: 150px;
+    background-color: black;
+    padding-top: 4rem;
+    margin-bottom: 0;
 }
