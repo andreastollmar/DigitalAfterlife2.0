@@ -5,25 +5,172 @@
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
 
-<h3>@ViewData["Title"]</h3>
-<partial name="_StatusMessage" for="StatusMessage" />
-<div class="row">
-    <div class="col-md-6 text-dark">
-        <form id="profile-form" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Username" class="form-control"  disabled />
-                <label asp-for="Username" class="form-label">Användarnamn</label>
+
+@if (Model.NextOfKin == null)
+{
+
+
+    <div class="row">
+        <div class="col-9 text-dark">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                    <h3>Vänligen fyll i dina uppgifter</h3>
+                    <p class="mb-4 pb-2 pb-md-0 mb-md-5">För att du ska kunna gå vidare i processen, så behöver vi dina personuppgifter.</p>
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <div class="form-outline">
+                                    <input asp-for="NextOfKin.FirstName" type="text" id="firstName" class="form-control form-control" />
+                                    <label asp-for="NextOfKin.FirstName" class="form-label">Förnamn</label>
+                                    <span asp-validation-for="NextOfKin.FirstName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-outline">
+                                    <input asp-for="NextOfKin.LastName" type="text" id="lastName" class="form-control form-control" />
+                                    <label asp-for="NextOfKin.LastName" class="form-label">Efternamn</label>
+                                    <span asp-validation-for="NextOfKin.LastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3 d-flex align-items-center">
+                                <div class="form-outline datepicker w-100">
+                                    <input asp-for="NextOfKin.BirthDate" type="text" class="form-control form-control" id="birthdayDate" maxlength="6" placeholder="6 siffror" />
+                                    <label asp-for="NextOfKin.BirthDate" class="form-label">Födelsedatum</label>
+                                    <span asp-validation-for="NextOfKin.BirthDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3 d-flex align-items-center">
+                                <div class="form-outline datepicker w-100">
+                                    <input asp-for="NextOfKin.SocialSecurity" type="text" class="form-control form-control" id="birthdayDate" maxlength="4" placeholder="4 siffror" />
+                                    <label asp-for="NextOfKin.SocialSecurity" class="form-label">Fyra sista</label>
+                                    <span asp-validation-for="NextOfKin.SocialSecurity" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <h6 class="mb-1 pb-1">Kön: </h6>
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="NextOfKin.Gender" class="form-check-input" type="radio" id="femaleGender" value="Kvinna" checked="checked" />
+                                    <label asp-for="NextOfKin.Gender" class="form-check-label">Kvinna</label>
+                                    <span asp-validation-for="NextOfKin.Gender" class="text-danger"></span>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="NextOfKin.Gender" class="form-check-input" type="radio" id="maleGender" value="Man" />
+                                    <label asp-for="NextOfKin.Gender" class="form-check-label">Man</label>
+                                    <span asp-validation-for="NextOfKin.Gender" class="text-danger"></span>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input asp-for="NextOfKin.Gender" class="form-check-input" type="radio" id="otherGender" value="Annan" />
+                                    <label asp-for="NextOfKin.Gender" class="form-check-label">Annan</label>
+                                    <span asp-validation-for="NextOfKin.Gender" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2 pb-2">
+                                <div class="form-outline">
+                                    <input asp-for="NextOfKin.City" type="text" id="city" class="form-control form-control" />
+                                    <label asp-for="NextOfKin.City" class="form-label">Stad</label>
+                                    <span asp-validation-for="NextOfKin.City" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-2 pb-2">
+                                <div class="form-outline">
+                                    <input asp-for="NextOfKin.StreetAddress" type="text" id="streetaddress" class="form-control form-control" />
+                                    <label asp-for="NextOfKin.StreetAddress" class="form-label">Gatuaddress</label>
+                                    <span asp-validation-for="NextOfKin.StreetAddress" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2 pb-2">
+                                <div class="form-outline">
+                                    <input asp-for="NextOfKin.ZipCode" type="text" id="zipcode" class="form-control form-control" />
+                                    <label asp-for="NextOfKin.ZipCode" class="form-label">Postnummer</label>
+                                    <span asp-validation-for="NextOfKin.ZipCode" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-2 pb-2">
+                                <select asp-for="NextOfKin.Country" class="select form-control" id="country">
+                                    <option value="SE">Sverige</option>
+                                    <option value="NO">Norge</option>
+                                    <option value="DK">Danmark</option>
+                                    <option value="FI">Finland</option>
+                                </select>
+                                <label asp-for="NextOfKin.Country" class="form-label select-label">Land</label>
+                                <span asp-validation-for="NextOfKin.Country" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-2 pb-2">
+                                <div class="form-outline">
+                                    <input asp-for="NextOfKin.PhoneNumber" type="text" id="phoneNumber" class="form-control form-control" maxlength="12" placeholder="+46xxxxxxxxx" />
+                                    <label asp-for="NextOfKin.PhoneNumber" class="form-label">Telefonnummer</label>
+                                    <span asp-validation-for="NextOfKin.PhoneNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-2 pb-2">
+                                <div class="form-outline">
+                                    <input asp-for="NextOfKin.Email" type="email" id="emailAddress" class="form-control form-control" />
+                                    <label asp-for="NextOfKin.Email" class="form-label">Email</label>
+                                    <span asp-validation-for="NextOfKin.Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-2 text-center">
+                            <input class="btn btn-primary btn-lg" type="submit" value="Registrera personuppgifter" />
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" />
-                <label asp-for="Input.PhoneNumber" class="form-label">Telefon nummer</label>
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Spara</button>
-        </form>
+        </div>
     </div>
-</div>
+}
+else
+{
+
+    var country = @Model.NextOfKin.Country;
+    if (country == "NO")
+    {
+        country = "Norge";
+    }
+    if (country == "SE")
+    {
+        country = "Sverige";
+    }
+    if (country == "DK")
+    {
+        country = "Danmark";
+    }
+    if (country == "FI")
+    {
+        country = "Finland";
+    }
+    <div class="text-white">
+        <p>Dina uppgifter</p>
+
+        <p>Namn: @Model.NextOfKin.FirstName @Model.NextOfKin.LastName</p>
+        <p>Personnummer: @Model.NextOfKin.BirthDate-@Model.NextOfKin.SocialSecurity</p>
+        <p>Adress: @Model.NextOfKin.StreetAddress</p>
+        <p>Postkod: @Model.NextOfKin.ZipCode Land: @country</p>
+        <p>Kön: @Model.NextOfKin.Gender</p>
+        <p>Telefon: @Model.NextOfKin.PhoneNumber</p>
+        <p>Email: @Model.NextOfKin.Email</p>
+
+        <a class="btn btn-primary" asp-page="./EditNOK">Ändra</a>
+
+    </div>
+}
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

@@ -29,9 +29,13 @@ namespace DigitalAfterlife2._0.Pages.Portal
             
             if (check == null)
             {
-                return RedirectToPage("/Portal/Personuppgifter");
+               //  return RedirectToPage("./Account/Index"); fixa 
             }
-            Perished = _context.Perished.Where(x => x.NextOfKinId == check.Id).ToList();
+            if(check != null)
+            {
+                Perished = _context.Perished.Where(x => x.NextOfKinId == check.Id).ToList();
+
+            }
 
             return Page();
 
