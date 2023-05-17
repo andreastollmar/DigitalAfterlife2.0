@@ -24,6 +24,8 @@
     <h2 class="fw-bold">Fullmakt</h2>
     <p>Här laddar du upp en fullmakt, som ger oss möjlighet att agera i erat namn.</p>
     <a asp-page="fullmakt">Mer info...</a>
+
+    <p></p>
    
 }
 else
@@ -31,6 +33,7 @@ else
     @if(Model.Perished != null && Model.Perished.Count > 0)
     {
         <h1 class="display-3 text-center fw-bold">Dina pågående ärenden</h1>
+        <p>En ruta med info (namn, personnummer) samt en knapp som tar dig till persishedpersonuppgifter. </p>
         <hr />
         foreach(var p in Model.Perished)
         {
@@ -62,7 +65,8 @@ else
     }
     else
     {
-        <h1 class="display-4 text-center">Du har inga pågående ärenden. Vänligen fyll i en ny omkommen</h1>
+        <h1 class="display-4 text-center">Du har inga pågående ärenden.</h1>
+        <button>skapa ärende ---> /perishedinfo/skapa ny</button>
     }
 }
 
