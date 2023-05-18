@@ -32,14 +32,18 @@ else
 {
     @if(Model.Perished != null && Model.Perished.Count > 0)
     {
-        <h1 class="display-3 text-center fw-bold">Dina pågående ärenden</h1>
+        <h1 class="display-2 text-center fw-bold">Dina pågående ärenden</h1>
         <p>En ruta med info (namn, personnummer) samt en knapp som tar dig till persishedpersonuppgifter. </p>
         <hr />
         foreach(var p in Model.Perished)
         {
-            <h3 class="fw-bold">@p.FirstName @p.LastName</h3>
+            <div class="d-flex">
+            <h3 class="fw-bold mx-3">@p.FirstName @p.LastName (@p.BirthDate-@p.SocialSecurity)</h3>
+            <a class="btn btn-primary" asp-page="Ärende">Se ärende</a>
+            </div>
 
-            if(p.Deathcert == true)
+
+@*            if(p.Deathcert == true)
             {
                 <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Du har laddat upp dödscertifikat </p>
             }
@@ -58,7 +62,7 @@ else
             if(p.Deathcert == true && p.Fullmakt == true)
             {
                 <p>Invänta återkopplning från oss</p>
-            }
+            }*@
         <hr />
 
         }

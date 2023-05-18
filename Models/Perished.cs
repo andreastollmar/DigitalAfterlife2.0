@@ -15,12 +15,15 @@ namespace DigitalAfterlife2._0.Models
         public int BirthDate { get; set; } // 6 siffror
         [Display(Name = "Sista 4")]
         public int SocialSecurity { get; set; } // 4 siffror
+        [Display(Name = "Kreditkorts nummer")]
+        public string? CreditCardNumber { get; set; }
         [Display(Name = "Telefon nummer")]
         public string? PhoneNumber { get; set; }
         [DataType(DataType.EmailAddress)]
         public string? Email { get; set; }
         public bool? Deathcert { get; set; }
         public bool? Fullmakt { get; set; }
+        public bool? Services { get; set; }
 
 
 

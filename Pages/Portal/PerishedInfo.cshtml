@@ -5,9 +5,9 @@
     Layout = "_InloggningsPortal";
 }
 
-<h1>Skapa</h1>
+<h1>Skapa ett ärende</h1>
 
-<h4>Avliden</h4>
+<h4>För att vi ska kunna skapa ett ärende, så behöver vi ha information om den avlidne.</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -69,6 +69,13 @@
                 <input asp-for="Perished.Email" class="form-control" />
                 <span asp-validation-for="Perished.Email" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label asp-for="Perished.CreditCardNumber" class="control-label">Kreditkortsnummer (Vi behöver detta för att söka och identifiera konton)</label>
+                <input asp-for="Perished.CreditCardNumber" class="form-control" />
+                <span asp-validation-for="Perished.CreditCardNumber" class="text-danger"></span>
+            </div>
+
 
             <div class="form-group">
                 <input type="submit" value="Skapa" class="btn btn-primary my-2" />
