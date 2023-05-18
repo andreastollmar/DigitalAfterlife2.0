@@ -1,4 +1,5 @@
 using DigitalAfterlife2._0.Data;
+using DigitalAfterlife2._0.Helpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,9 @@ namespace DigitalAfterlife2._0
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            builder.Services.AddTransient<APIDependency>();
+
 
             builder.Services.AddAuthorization(options =>
             {
