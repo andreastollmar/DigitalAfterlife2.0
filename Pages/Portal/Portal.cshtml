@@ -3,68 +3,63 @@
 @{
     Layout = "_InloggningsPortal";
 }
-@if(Model.PageNr == 1)
+@if (Model.PageNr == 1) //dokument
 {
-    <div class="container text-center mt-3" style="border: 2px solid black">
+    <div class="container text-center">
         <h1 class="display-2">Välj ett dokument att ladda upp</h1>
-        <p>Här ser du alla dokument som du ska ladda upp för att gå vidare i processen.</p>
+            <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
     </div>
-    <br />
-    <hr />
-    <h2 class="fw-bold">Avlidne</h2>
-    <p>Step 1: Här laddar du upp all information om den avlidne</p>
-    <a asp-page="PerishedInfo">Mer info...</a>
     <br />
     <hr />
     <h2 class="fw-bold">Dödscertifikat</h2>
     <p>Här laddar du upp den avlidnes dödscertifikat, du får den av blabla</p>
-    <a asp-page="deathcert">Mer info...</a>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <br />
+    <p class="fw-bold">Välj att ladda hem en befintlig mall från våran sida eller ladda upp ett eget intyg.</p>
+    <a class="btn btn-primary" asp-page="deathcert">Ladda upp ett eget dödscertifikat</a>
+    <a class="btn btn-primary mx-2" asp-page="deathcert">Ladda hem en mall (lägg till länk)</a>
     <br />
     <hr />
     <h2 class="fw-bold">Fullmakt</h2>
     <p>Här laddar du upp en fullmakt, som ger oss möjlighet att agera i erat namn.</p>
-    <a asp-page="fullmakt">Mer info...</a>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <br />
+    <p class="fw-bold">Välj att ladda hem en befintlig mall från våran sida eller ladda upp ett eget intyg.</p>
+    <a class="btn btn-primary" asp-page="Fullmakt">Ladda upp en egen fullmakt</a>
+    <a class="btn btn-primary mx-2" asp-page="Fullmakt">Ladda hem en mall (lägg till länk)</a>
 
-    <p></p>
-   
 }
-else
+else //översikt
 {
-    @if(Model.Perished != null && Model.Perished.Count > 0)
+    @if (Model.Perished != null && Model.Perished.Count > 0)
     {
-        <h1 class="display-2 text-center fw-bold">Dina pågående ärenden</h1>
-        <p>En ruta med info (namn, personnummer) samt en knapp som tar dig till persishedpersonuppgifter. </p>
+        <h1 class="display-2 text-center">Dina pågående ärenden</h1>
         <hr />
-        foreach(var p in Model.Perished)
+        foreach (var p in Model.Perished)
         {
             <div class="d-flex">
-            <h3 class="fw-bold mx-3">@p.FirstName @p.LastName (@p.BirthDate-@p.SocialSecurity)</h3>
-            <a class="btn btn-primary" asp-page="Ärende">Se ärende</a>
+                <h2 class="fw-bold mx-3">@p.FirstName @p.LastName (@p.BirthDate-@p.SocialSecurity)</h2>
+                <a class="btn btn-primary" asp-page="Ärende">Se ärende</a>
             </div>
-
-
-@*            if(p.Deathcert == true)
-            {
-                <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Du har laddat upp dödscertifikat </p>
-            }
-            else
-            {
-                <p><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e41b2f;"></i> Ladda upp dödscertifikat för @p.FirstName</p>
-            }
-            if(p.Fullmakt == true)
-            {
-                <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Du har laddat upp fullmakt</p>
-            }
-            else
-            {
-                <p><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e41b2f;"></i> Ladda upp fullmakt för @p.FirstName</p>
-            }
-            if(p.Deathcert == true && p.Fullmakt == true)
-            {
-                <p>Invänta återkopplning från oss</p>
-            }*@
-        <hr />
-
+            <hr />
         }
     }
     else

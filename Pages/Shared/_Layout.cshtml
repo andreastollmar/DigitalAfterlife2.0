@@ -15,7 +15,6 @@
 </head>
 <body>
     <header>
-
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent box-shadow mb-3">
             <div class="container">
                 <i class="fa-brands fa-pied-piper-alt fa-2xl" style="color: #ffffff;">&nbsp;</i>
@@ -39,17 +38,19 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" style="margin-bottom: 600px">
         <main role="main" class="pb-5 text-white">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="footer text-muted text-center text-white ">
-        <div class="container">
-            &copy; 2023 - DigitalAfterlife - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+    <div class="container-fluid">
+        <footer class="footer text-muted text-center text-white ">
+            <div class="container">
+                &copy; 2023 - DigitalAfterlife - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -7,42 +7,55 @@
     var user = await UserManager.GetUserAsync(User);
 }
 
-<div class="container-fluid text-center">
-    <h1 class="display-2">Fullmakt</h1>
-    <p class="fw-bold">Ladda upp din fullmakt här</p>
+<div class="container-fluid">
+    <h1 class="display-2 text-center">Fullmakt</h1>
+    <p class="fw-bold text-center">Ladda upp din fullmakt här</p>
 
-    <form method="post" enctype="multipart/form-data">
-        
-    <label asp-for="@Model.Files.UploadedFile" class="form-label"></label>
-    <input type="file" class="form-control" name="UploadedFullmakt" />
-        <div class="form-group">
-            <label asp-for="Perished.NextOfKinId" class="control-label"></label>
-            <select asp-for="Perished.NextOfKinId" class="form-control" asp-items="ViewBag.PerishedId"></select>
-        </div>        
-    <br />
-    <input type="submit" value="Ladda upp" class="btn btn-success" />
-    
-    </form>
+    <div class="row">
+        <div class="col-4 m-auto">
+            <form method="post" enctype="multipart/form-data">
+
+                <label asp-for="@Model.Files.UploadedFile" class="form-label"></label>
+                <input type="file" class="form-control" name="UploadedFullmakt" />
+
+                <div class="form-group mt-2">
+                    <label asp-for="Perished.NextOfKinId" class="control-label">Välj person att koppla fullmakten till.</label>
+                    <select asp-for="Perished.NextOfKinId" class="form-control" asp-items="ViewBag.PerishedId"></select>
+                </div>
+
+                <br />
+
+                <div class="text-center">
+                    <input type="submit" value="Ladda upp" class="btn btn-success mb-5" />
+                </div>
+
+            </form>
+        </div>
+    </div>
 </div>
 @if (Model.FilesList.Count > 0)
 {
-    <h3 class="fw-bold">Dina tidigare uppladdningar</h3>
+
+    <h2 class="text-center fw-bold">Dina tidigare uppladdningar</h2>
     <hr />
     foreach (var file in Model.FilesList)
     {
-        if(file.UploadedFile.Contains("fullmakt"))
+        if (file.UploadedFile.Contains("fullmakt"))
         {
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
+                    <h3>Ärendenummer: @file.PerishedId</h3>
                     <p>Filnamn: @file.UploadedFile</p>
                     <p>Datum för uppladdning: @file.DateOfUpload</p>
                 </div>
-                <div class="col-6">
-                    <a class="btn btn-primary" asp-route-deleteId="@file.Id" asp-page="Deathcert">Ta bort</a>
+                <div class="col-2">
+                    <a class="btn btn-primary mx-2" style="margin-top: 30px" asp-route-deleteId="@file.Id" asp-page="Deathcert">Ladda hem</a>
+                    <a class="btn btn-primary" style="margin-top: 30px" asp-route-deleteId="@file.Id" asp-page="Deathcert">Ta bort</a>
                 </div>
+
                 <hr />
             </div>
         }
-        
+
     }
 }
