@@ -150,7 +150,7 @@ body {
     background-color: black;
     padding-top: 4rem;
     margin-bottom: 0;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0px;
     left: 0;
     right: 0;
