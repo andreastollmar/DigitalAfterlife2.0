@@ -4,159 +4,235 @@ font-family: 'Nunito', sans-serif;
 font-family: 'Nunito Sans', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'PT Sans', sans-serif;*/
-p {
-    font-family: 'PT Sans', sans-serif;
-    letter-spacing: 0.1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Barlow Condensed', sans-serif;
-    letter-spacing: 0.1rem;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .row,
 .container-fluid {
     padding: 0;
     margin: 0;
 }
 
-
-.hero-inner-left {
-    border: 2px solid black;
-    padding: 16px;
-    max-width: 400px;
+.br-16{
+    border-radius: 16px;
+}
+.container, .container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.hero-inner-right {
-    border: 2px solid black;
-    padding: 16px;
-    max-width: 300px;
-    margin-left: 100px;
+.pb-5,
+.py-5{
+    padding-bottom: 3rem!important;
+}
+.pt-5,
+.py-5 {
+    padding-top: 3rem !important;
+}
+.mb-5,
+.my-5{
+    margin-bottom: 3rem!important;
+}
+*, :after, :before{
+    box-sizing: border-box;
+}
+.front-page{
+    padding: 24px 0px 0px;
+}
+.front-page header-h2{
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 900;
+}
+.feature-title{
+    margin: 0px -15px;
+    padding: 32px 0px;
+}
+.header-h2{
+    margin: 0px 0px 24px;
 }
 
-.about-inner-bot {
-    border: 2px solid black;
-    padding: 16px;
-    max-width: 350px;
+
+div {
+    display: block;
 }
-
-.row-hero {
-    margin: 140px 0;
-    margin-bottom: 250px;
-    display: flex;
-}
-
-section {
-    /*border: 2px solid green;*/
-}
-
-.row-top p {
-    margin-left: 20px;
-}
-
-.row-bot p {
-    margin-right: 20px;
-}
-
-
-html {
-    font-size: 14px;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
+@media (min-width: 965px)  {
+    .container,
+    .frontpage{
+        max-width: 1360px;
+        padding: 0 2rem;
     }
+    
 }
 
-.hero .hero-bg {
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    bottom: 0;
-    content: "";
-    height: 100%;
-    margin: 0 auto;
-    position: absolute;
-    right: 90px;
+.features{
+    margin: 40px 40px 48px;
+    padding: 48px 0px;
 }
+    
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    background-image: linear-gradient(to bottom, #212121, #131a31, #1b1c2c, #1f1e26, #051937 );
-}
+    
 
 
 
-/*Start regform*/
 
-/*.gradient-custom {
+    .bg-cream {
+        background-color: #f6f2ed !important;
+    }
+
+    .frontpage > .viewport {
+        flex: 1;
+    }
+
+    p {
+        font-family: 'PT Sans', sans-serif;
+        letter-spacing: 0.1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Barlow Condensed', sans-serif;
+        letter-spacing: 0.1rem;
+        color: #24201f;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    
+
+
+    .hero-inner-left {
+        border: 2px solid black;
+        padding: 16px;
+        max-width: 400px;
+    }
+
+    .hero-inner-right {
+        border: 2px solid black;
+        padding: 16px;
+        max-width: 300px;
+        margin-left: 100px;
+    }
+
+    .about-inner-bot {
+        border: 2px solid black;
+        padding: 16px;
+        max-width: 350px;
+    }
+
+    .row-hero {
+        margin: 140px 0;
+        margin-bottom: 250px;
+        display: flex;
+    }
+
+    section {
+        /*border: 2px solid green;*/
+    }
+
+    .row-top p {
+        margin-left: 20px;
+    }
+
+    .row-bot p {
+        margin-right: 20px;
+    }
+
+
+    html {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        html {
+            font-size: 16px;
+        }
+    }
+
+    .hero .hero-bg {
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: 0;
+        content: "";
+        height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        right: 90px;
+    }
+
+    .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+        box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    }
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        /*background-image: linear-gradient(to bottom, #212121, #131a31, #1b1c2c, #1f1e26, #051937 );*/
+        background-color: #fff;
+    }
+
+
+
+    /*Start regform*/
+
+    /*.gradient-custom {
     background-image: linear-gradient(to right top, #051937, #002f4f, #004665, #005e78, #007789);
 }*/
 
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
-    font-size: 1rem;
-    line-height: 2.15;
-    padding-left: .75em;
-    padding-right: .75em;
-}
-
-.card-registration .select-arrow {
-    top: 13px;
-}
-
-/*Slut regform*/
-
-
-/*testar att modda en knapp*/
-.btn-jeppe {
-    background-color: #051937;
-    color: white;
-}
-
-    .btn-jeppe:hover {
-        color: #f0f0f0;
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+        font-size: 1rem;
+        line-height: 2.15;
+        padding-left: .75em;
+        padding-right: .75em;
     }
 
-/*hette från början .nav-link */
-.nav-text {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2em;
-}
+    .card-registration .select-arrow {
+        top: 13px;
+    }
 
-.navbar-brand {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
-    letter-spacing: 5px;
-}
+    /*Slut regform*/
 
-.footer {
-    height: 150px;
-    background-color: black;
-    padding-top: 4rem;
-    margin-bottom: 0;
-    /*position: absolute;*/
-    bottom: 0px;
-    left: 0;
-    right: 0;
-}
+
+    /*testar att modda en knapp*/
+    .btn-jeppe {
+        background-color: #051937;
+        color: white;
+    }
+
+        .btn-jeppe:hover {
+            color: #f0f0f0;
+        }
+
+    /*hette från början .nav-link */
+    .nav-text {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+    }
+
+    .navbar-brand {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+
+    .footer {
+        height: 150px;
+        background-color: black;
+        padding-top: 4rem;
+        margin-bottom: 0;
+        /*position: absolute;*/
+        bottom: 0px;
+        left: 0;
+        right: 0;
+    }

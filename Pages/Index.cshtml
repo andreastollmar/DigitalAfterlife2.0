@@ -4,27 +4,39 @@
 @inject SignInManager<IdentityUser> SignInManager
 @{
     ViewData["Title"] = "Startsida";
+    Layout = "_FrontpageTest";
 }
 
 <div class="front-page">
-    <div class="container-fluid hero">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="container">
-                    <section class="row row-hero">
-                        <div class="col-lg-7 hero-inner-left">
-                            <h3 class="display-3">Det digitala efterlivet</h3>
-                            <p>
-                                Vi vill underlätta för er genom att <br /> tillgodo se våra tjänster där vi hanterar <br />
-                                alla digitala spår efter en avliden.
-                            </p>
-                            <input type="button" class="btn btn-warning" value="Logga in" />
-                        </div>
-                        <div class="col-lg-5 hero-inner-right"></div>
-
-                    </section>
+    <div class="features bg-cream br-16 pb-5 mb-5 pt-5">
+        <div class="container">
+            <div class="feature-title row">
+                <div class="col text-center" style="padding: 0px 15px;">
+                    <h2 class="header-h2">
+                        Din resa startar här
+                        <br />
+                        hejehejhej
+                    </h2>
                 </div>
             </div>
+            <div class="row mb-4 py-4">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="row">
+                        <div class="d-flex justify-content-center align-items-center col-lg-5 offset-lg-1 order-lg-1">
+                            <div class="p-2">
+                                <h3 class="header-h3 mb-4">EN TITEL</h3>
+                                <p class="font-xl">LOREM IPSUM</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 offset-lg-1 order-lg-2">
+                            <p>en bild typ eller annat innehåll</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4 py4"></div>
+            <div class="row mb-4 py4"></div>
+            <div class="home-page-cta d-none d-md-block pb-4"></div>
         </div>
     </div>
 
