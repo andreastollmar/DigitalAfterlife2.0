@@ -12,27 +12,27 @@
             if (await UserManager.IsInRoleAsync(user, "Admin"))
             {
                 <li class="nav-item">
-                    <a class="nav-link text-white fw-bold" asp-page="/Admin/Index">Admin</a>
+                    <a class="nav-link text-dark fw-bold" asp-page="/Admin/Index">Admin</a>
                 </li>
             }
         }
 
         <li class="nav-item">
-            <a class="nav-link text-white fw-bold" asp-area="Identity" asp-page="/Account/Manage/Index">Mina sidor</a>
+            <a class="nav-link text-dark fw-bold" asp-area="Identity" asp-page="/Account/Manage/Index">Mina sidor</a>
         </li>
         <li class="nav-item">
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-link text-white fw-bold">Logga ut</button>
+                <button type="submit" class="nav-link btn btn-link text-dark fw-bold">Logga ut</button>
             </form>
         </li>
     }
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-white fw-bold" asp-area="Identity" asp-page="/Account/Register">Registrera</a>
+            <a class="nav-link text-dark fw-bold" asp-area="Identity" asp-page="/Account/Register">Registrera</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white fw-bold" asp-area="Identity" asp-page="/Account/Login">Logga in</a>
+            <a class="nav-link text-dark fw-bold" asp-area="Identity" asp-page="/Account/Login">Logga in</a>
         </li>
     }
 </ul>

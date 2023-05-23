@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 <html>
 <head>
     <meta charset="utf-8" />
@@ -13,8 +14,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat&family=Nunito&family=Nunito+Sans&family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow mb-1">
+            <div class="container-fluid mx-5">
+                <i class="fa-brands fa-pied-piper-alt fa-2xl" style="color: #000000;">&nbsp;</i>
+                <a class="navbar-brand text-dark" asp-area="" asp-page="/Index">Digital Afterlife</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Portal/Portal">Portal</a>
+                            </li>
+                        }
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
     <div>
         @RenderBody()
     </div>
+    <div class="container-fluid">
+        <footer class="footer text-muted text-center text-white ">
+            <div class="container">
+                &copy; 2023 - DigitalAfterlife - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="https://kit.fontawesome.com/1114296e1a.js" crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
