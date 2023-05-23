@@ -10,6 +10,7 @@ namespace DigitalAfterlife2._0.Models
         public string FirstName { get; set; }
         [Display(Name = "Efternamn")]
         public string LastName { get; set; }
+        [Display(Name = "Kön")]
         public string? Gender { get; set; }
         [Display(Name = "Födelsedatum")]
         public int BirthDate { get; set; } // 6 siffror

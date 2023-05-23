@@ -1,14 +1,20 @@
 ﻿body {
     margin: 0;
     padding: 0;
+    color: white;
+}
+
+.row,
+.container-fluid {
+    margin: 0;
+    padding: 0;
 }
 
 .adminbtn {
     width: 100%;
     min-height: 30px;
-    border: 2px solid black;
     border-radius: 15px;
-    background-color: aquamarine;
+    background-color: white;
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -25,4 +31,9 @@
     margin-top: 25px;
     margin-bottom: 100px;
     
+}
+
+body {
+    /*background-image: linear-gradient(to bottom, #212121, #131a31, #1b1c2c, #1f1e26, #051937 );*/
+    background-color: #212121;
 }

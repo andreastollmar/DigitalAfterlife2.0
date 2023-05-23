@@ -17,49 +17,52 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-route-pageNr="" asp-page="/Portal/Portal">DigitalAfterlife</a>
+                <a class="navbar-brand text-white" asp-area="" asp-route-pageNr="" asp-page="/Portal/Portal">DigitalAfterlife</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1"></ul>
+                    <ul class="navbar-nav flex-grow-1 text-dark"></ul>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
     <div class="container-fluid">
-        <div class="row justify-content-between">
-            <div class="container-fluid py-2">
-                <div class="row py-3" style="border: 2px solid red">
+        <div class="row">
+            <div class="container text-center">
+                <div class="d-inline-flex">
 
-                    <div class="col text-center m-2" style="background-color: lightblue">
+                    <div class="text-center m-2">
                         <a class="adminbtn" asp-page="/Admin/RoleAdmin/Index">Roller</a>
                     </div>
 
-                    <div class="col text-center m-2" style="background-color: lightgray">
+                    <div class="text-center m-2">
                         <a class="adminbtn" asp-page="/Admin/ContentUpload">Ärenden</a>
                     </div>
 
-                    <div class="col text-center m-2" style="background-color: palegreen">
+                    <div class="text-center m-2">
                         <a class="adminbtn" asp-page="/Admin/NextOfKinAdmin/Index">Användare</a>
                     </div>
 
-                    <div class="col text-center m-2" style="background-color: bisque">
+                    <div class="text-center m-2">
                         <a class="adminbtn" asp-page="/Admin/PerishedAdmin/Index">Avlidna</a>
                     </div>
 
-                    <div class="col text-center m-2" style="background-color: burlywood">
+                    <div class="text-center m-2">
                         <a class="adminbtn" asp-page="/Admin/ContentUpload">Content</a>
+                    </div>
+                    <div class="text-center m-2">
+                        <a class="adminbtn" asp-page="/Admin/ContentUpload">API</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="">
-                <div class="container-fluid" style="border: 2px solid green">
-                    @RenderBody()
+                <div class="container-fluid" ">
+                @RenderBody()
                 </div>
             </div>
         </div>
@@ -68,7 +71,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+                    @await RenderSectionAsync("Scripts", required: false)
 
 </body>
 </html>
