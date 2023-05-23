@@ -20,10 +20,10 @@
     @if (@Model.Users != null)
     {
         <table class="table text-white">
-            <tablehead>Username</tablehead>
+            <th>Username</th>
             @foreach (var role in Model.Roles)
             {
-                <tablehead>@role.Name</tablehead>
+                <th>@role.Name</th>
             }
             @foreach (var user in @Model.Users)
             {

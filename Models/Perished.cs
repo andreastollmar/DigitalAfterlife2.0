@@ -14,7 +14,7 @@ namespace DigitalAfterlife2._0.Models
         public string? Gender { get; set; }
         [Display(Name = "Födelsedatum")]
         public int BirthDate { get; set; } // 6 siffror
-        [Display(Name = "Sista 4")]
+        [Display(Name = "Födelsenummer")]
         public int SocialSecurity { get; set; } // 4 siffror
         [Display(Name = "Kreditkorts nummer")]
         public string? CreditCardNumber { get; set; }

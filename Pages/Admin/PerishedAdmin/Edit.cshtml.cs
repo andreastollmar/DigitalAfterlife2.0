@@ -36,7 +36,7 @@ namespace DigitalAfterlife2._0.Pages.Admin.PerishedAdmin
                 return NotFound();
             }
             Perished = perished;
-           ViewData["NextOfKinId"] = new SelectList(_context.NextOfKin, "Id", "Id");
+           ViewData["NextOfKinId"] = new SelectList(_context.NextOfKin, "Id", "FirstName");
             return Page();
         }
 

@@ -6,9 +6,9 @@
     Layout = "_AdminLayout";
 }
 
-<h1>Create</h1>
+<h1>Skapa ny</h1>
 
-<h4>Perished</h4>
+<h4>Omkommen</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -45,6 +45,11 @@
                 <span asp-validation-for="Perished.PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Perished.CreditCardNumber" class="control-label"></label>
+                <input asp-for="Perished.CreditCardNumber" class="form-control" />
+                <span asp-validation-for="Perished.CreditCardNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Perished.Email" class="control-label"></label>
                 <input asp-for="Perished.Email" class="form-control" />
                 <span asp-validation-for="Perished.Email" class="text-danger"></span>
@@ -64,14 +69,14 @@
                 <select asp-for="Perished.NextOfKinId" class ="form-control" asp-items="ViewBag.NextOfKinId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Skapa" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Tillbaka</a>
 </div>
 
 @section Scripts {
