@@ -4,6 +4,29 @@
     color: white;
 }
 
+p {
+    font-family: 'PT Sans', sans-serif;
+    color: #413c3b;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.1rem;
+    color: #24201f;
+}
+
 .row,
 .container-fluid {
     margin: 0;
@@ -35,5 +58,19 @@
 
 body {
     /*background-image: linear-gradient(to bottom, #212121, #131a31, #1b1c2c, #1f1e26, #051937 );*/
-    background-color: #212121;
+    background-color: navajowhite;
+}
+
+/*hette från början .nav-link */
+.nav-text {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.navbar-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 5px;
 }

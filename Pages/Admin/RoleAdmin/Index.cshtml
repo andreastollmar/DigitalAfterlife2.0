@@ -19,7 +19,7 @@
     <h3>Befintliga Användare:</h3>
     @if (@Model.Users != null)
     {
-        <table class="table text-white">
+        <table class="table text-dark">
             <th>Username</th>
             @foreach (var role in Model.Roles)
             {
@@ -56,7 +56,7 @@
 </div>
 
 <div>
-    <form method="post">
+    <form method="post" class="text-dark">
         <label for="RoleName">Ny roll</label>
         <input name="RoleName" id="RoleName" />
         <input type="submit" value="Skapa roll" />
