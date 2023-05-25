@@ -34,108 +34,6 @@ div {
     display: block;
 }
 
-.br-16 {
-    border-radius: 16px;
-}
-
-.pb-4,
-.py-4 {
-    padding-bottom: 1.5rem !important;
-}
-
-.pt-4,
-.py-4 {
-    padding-top: 1.5rem !important;
-}
-
-.mb-4,
-.my-4 {
-    margin-bottom: 1.5rem !important;
-}
-
-.pb-5,
-.py-5 {
-    padding-bottom: 3rem !important;
-}
-
-.pt-5,
-.py-5 {
-    padding-top: 3rem !important;
-}
-
-.mb-5,
-.my-5 {
-    margin-bottom: 3rem !important;
-}
-
-.front-page {
-    padding: 24px 0px 0px;
-}
-
-    .front-page header-h2 {
-        font-size: 48px;
-        line-height: 62px;
-        font-weight: 900;
-    }
-
-.feature-title {
-    margin: 0px -15px;
-    padding: 32px 0px;
-}
-
-.header-h2 {
-    margin: 0px 0px 24px;
-}
-
-.header-h1 {
-    margin: 0px 0px 24px;
-    font-size: 64px;
-}
-
-.hero-section {
-    position: absolute;
-}
-
-.hero-left {
-    z-index: 100;
-}
-
-.hero-right {
-    position: relative;
-    right: 500px;
-    z-index: 1;
-}
-
-@media (min-width: 965px) {
-    .container,
-    .frontpage {
-        max-width: 1360px;
-        padding: 0 2rem;
-    }
-}
-
-.features {
-    margin: 40px 40px 48px;
-    padding: 48px 0px;
-}
-
-.bg-cream {
-    background-color: #f6f2ed !important;
-    /*    background-color: #f7f6dc !important;*/
-}
-
-.bg-vanlig {
-    background-color: #FCF8E8 !important;
-}
-
-.bg-greencream {
-    background-color: #94B49F !important;
-}
-
-.frontpage > .viewport {
-    flex: 1;
-}
-
 .font-xl,
 .text-xl {
     font-size: 18px;
@@ -170,27 +68,141 @@ h6 {
     }
 }
 
+
+.bg-cream {
+    background-color: #f6f2ed !important;
+}
+
+.bg-vanlig {
+    background-color: #FCF8E8 !important;
+}
+
+.bg-greencream {
+    background-color: #94B49F !important;
+}
+
+.br-16 {
+    border-radius: 16px;
+}
+
+.pb-4,
+.py-4 {
+    padding-bottom: 1.5rem !important;
+}
+
+.pt-4,
+.py-4 {
+    padding-top: 1.5rem !important;
+}
+
+.mb-4,
+.my-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.pb-5,
+.py-5 {
+    padding-bottom: 3rem !important;
+}
+
+.pt-5,
+.py-5 {
+    padding-top: 3rem !important;
+}
+
+.mb-5,
+.my-5 {
+    margin-bottom: 3rem !important;
+}
+
+@media (min-width: 965px) {
+    .container,
+    .frontpage {
+        max-width: 1360px;
+        padding: 0 2rem;
+    }
+}
+
+/*hette från början .nav-link */
+.nav-text {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.navbar-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+.front-page {
+    padding: 24px 0px 0px;
+}
+
+    .front-page header-h2 {
+        font-size: 48px;
+        line-height: 62px;
+        font-weight: 900;
+    }
+
+.header-h1 {
+    margin: 0px 0px 24px;
+    font-size: 64px;
+}
+
+.header-h2 {
+    margin: 0px 0px 24px;
+}
+
+.hero-section {
+    position: relative;
+    height: 1100px;
+}
+
+.hero-left {
+    position: absolute;
+    z-index: 100;
+    width: 700px;
+    top: 300px;
+    left: 50px;
+}
+
+.hero-right {
+    position: absolute;
+    z-index: 1;
+    right: 700px;
+    top: 5px;
+}
+
+.feature-section {
+    margin: 40px 40px 48px;
+    padding: 48px 0px;
+}
+
+.feature-title {
+    margin: 0px -15px;
+    padding: 32px 0px;
+}
+
+.step-section {
+
+}
+
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
-/*
-html {
-    position: relative;
-    min-height: 100%;
-}*/
+
 
 body {
-    /*background-image: linear-gradient(to bottom, #212121, #131a31, #1b1c2c, #1f1e26, #051937 );*/
     background-color: #fff;
 }
 
 
 
 /*Start regform*/
-
-/*.gradient-custom {
-background-image: linear-gradient(to right top, #051937, #002f4f, #004665, #005e78, #007789);
-}*/
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
     font-size: 1rem;
@@ -224,27 +236,11 @@ background-image: linear-gradient(to right top, #051937, #002f4f, #004665, #005e
         color: white;
     }
 
-/*hette från början .nav-link */
-.nav-text {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2em;
-}
-
-.navbar-brand {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
-    letter-spacing: 5px;
-}
-
 .footer {
     height: 150px;
     background-color: black;
     padding-top: 4rem;
-    margin-bottom: 0;
-    /*position: absolute;*/
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     right: 0;
 }
