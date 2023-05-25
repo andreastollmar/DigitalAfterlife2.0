@@ -2,8 +2,33 @@
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
-<ul class="nav nav-pills flex-column">
-    <li class="nav-item"><a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Profil</a></li>
-    <li class="nav-item"><a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Lösenord</a></li>
-    <li class="nav-item"><a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personlig data</a></li>
-</ul>
+@*<ul class="nav nav-pills" >
+    
+    
+    <li class="nav-item"></li>
+    <li class="nav-item"></li>
+    
+    <li class="nav-item"></li>
+    
+</ul>*@
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col mx-5 text-center">
+                    <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext) btn-death" id="profile" asp-page="./Index">Profil</a>
+                </div>
+                <div class="col text-center">
+                    <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext) btn-death" id="change-password" asp-page="./ChangePassword">Lösenord</a>
+                </div>
+                <div class="col mx-5 text-center">
+                    <a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext) btn-death" id="personal-data" asp-page="./PersonalData">Personlig data</a>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+</div>

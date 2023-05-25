@@ -1,33 +1,35 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Registrera";
+    ViewData["Title"] = "Skapa ny användare";
 }
-
-<h1 class="display-2 text-center">@ViewData["Title"]</h1>
-<div class="row text-center">
-    <div class="col-md-4 container py-3">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-dark">
-            <p class="text-white mt-2">Skapa ett nytt konto.</p>
-            <hr class="text-white" />
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                <label asp-for="Input.Email">Email</label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
-                <label asp-for="Input.Password">Lösenord</label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
-                <label asp-for="Input.ConfirmPassword">Bekräfta lösenord</label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Registrera</button>
-        </form>
+<div style="margin-top: 100px;">
+    <h1 class="display-2 text-center">@ViewData["Title"]</h1>
+    <div class="row text-center">
+        <div class="col-md-4 container">
+            <section>
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-dark m-auto pb-5" style="width: 400px;">
+                    <hr class="mt-5 mb-5" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                        <label asp-for="Input.Email">Email</label>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                        <label asp-for="Input.Password">Lösenord</label>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                        <label asp-for="Input.ConfirmPassword">Bekräfta lösenord</label>
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Skapa</button>
+                </form>
+            </section>
+        </div>
     </div>
 </div>
 

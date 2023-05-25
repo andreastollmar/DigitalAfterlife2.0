@@ -10,16 +10,20 @@
 
 }
 
-<h1 class="mx-3">Ditt konto</h1>
+<h1 class="text-center">Ditt konto</h1>
 
 <div>
-    <h2 class="mx-3">Ändra kontoinställningar</h2>
-    <hr />
-    <div class="row">
-        <div class="col-md-3">
-            <partial name="_ManageNav" />
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <partial name="_ManageNav" />
+            </div>
         </div>
-        <div class="col-md-9">
+        <hr />
+    </div>
+    <div class="row">
+        
+        <div class="col-12 text-center">
             @RenderBody()
         </div>
     </div>

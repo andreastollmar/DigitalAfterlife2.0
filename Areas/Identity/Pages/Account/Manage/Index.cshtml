@@ -157,12 +157,13 @@ else
         country = "Finland";
     }
     <div class="text-white">
-        <p>Dina uppgifter</p>
+        <h3>Dina uppgifter</h3>
 
         <p>Namn: @Model.NextOfKin.FirstName @Model.NextOfKin.LastName</p>
         <p>Personnummer: @Model.NextOfKin.BirthDate-@Model.NextOfKin.SocialSecurity</p>
         <p>Adress: @Model.NextOfKin.StreetAddress</p>
-        <p>Postkod: @Model.NextOfKin.ZipCode Land: @country</p>
+        <p>Postkod: @Model.NextOfKin.ZipCode</p>
+        <p>Land: @country</p>
         <p>Kön: @Model.NextOfKin.Gender</p>
         <p>Telefon: @Model.NextOfKin.PhoneNumber</p>
         <p>Email: @Model.NextOfKin.Email</p>
