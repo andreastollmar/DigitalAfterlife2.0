@@ -5,19 +5,20 @@
     ViewData["ActivePage"] = ManageNavPages.PersonalData;
 }
 
-<h3 class="mx-2">@ViewData["Title"]</h3>
+<h2 class="mb-3">@ViewData["Title"]</h2>
 
 <div class="row">
-    <div class="col m-auto">
-        <p>Ditt konto innehåller personliga uppgifter som du har givit oss. På den här sidan kan du ladda ner eller radera den datan.</p>
-        <p>
-            <strong>Notera att kontot inte kommer att kunna återskapas vid borttagning av data.</strong>
-            <p>Om du tar bort den här datan kommer ditt konto försvinna permanent.</p>
-
-        </p>
+    <div class="col m-auto vh-100">
+        <p>Ditt konto innehåller personliga uppgifter som du har givit oss. <br />På den här sidan kan du ladda ner eller radera den datan.</p>
         <form id="download-data" asp-page="DownloadPersonalData" method="post">
             <button class="btn btn-primary" type="submit">Ladda ner</button>
         </form>
+        <div class="container" style="width: 500px;">
+            <hr class="mb-5 mt-5" />
+        </div>
+        <h2>Varning!</h2>
+        <p>Kontot inte kommer att kunna återskapas vid borttagning av data. <br /> Om du tar bort den här datan kommer ditt konto försvinna permanent.</p>
+
         <p>
             <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger mt-2">Ta bort</a>
         </p>

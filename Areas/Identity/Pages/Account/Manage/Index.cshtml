@@ -156,17 +156,20 @@ else
     {
         country = "Finland";
     }
-    <div class="text-white">
-        <h3>Dina uppgifter</h3>
+    <div class="vh-100">
+        <h2 class="mb-4">Dina uppgifter</h2>
 
-        <p>Namn: @Model.NextOfKin.FirstName @Model.NextOfKin.LastName</p>
-        <p>Personnummer: @Model.NextOfKin.BirthDate-@Model.NextOfKin.SocialSecurity</p>
-        <p>Adress: @Model.NextOfKin.StreetAddress</p>
-        <p>Postkod: @Model.NextOfKin.ZipCode</p>
-        <p>Land: @country</p>
-        <p>Kön: @Model.NextOfKin.Gender</p>
-        <p>Telefon: @Model.NextOfKin.PhoneNumber</p>
-        <p>Email: @Model.NextOfKin.Email</p>
+
+        <p>
+            <span class="fw-bold font-l">Namn: </span>@Model.NextOfKin.FirstName @Model.NextOfKin.LastName <br>
+            <span class="fw-bold font-l">Personnummer: </span>@Model.NextOfKin.BirthDate-@Model.NextOfKin.SocialSecurity <br>
+            <span class="fw-bold font-l">Kön: </span>@Model.NextOfKin.Gender <br>
+            <span class="fw-bold font-l">Adress: </span>@Model.NextOfKin.StreetAddress <br>
+            <span class="fw-bold font-l">Postkod: </span>@Model.NextOfKin.ZipCode<br>
+            <span class="fw-bold font-l">Land: </span>@country<br>
+            <span class="fw-bold font-l">Telefon: </span>@Model.NextOfKin.PhoneNumber<br>
+            <span class="fw-bold font-l">Email: </span>@Model.NextOfKin.Email
+        </p>
 
         <a class="btn btn-primary" asp-page="./EditNOK">Ändra</a>
 

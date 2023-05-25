@@ -31,44 +31,79 @@
             </div>
         </nav>
     </header>
+
+
+
+    @*INTE KLART MED responsiv sidonav*@
+    @*    <div class="container-fluid">
+    <div class="row">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent box-shadow mb-3 col-2">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse-sub" data-bs-target=".navbar-collapse-sub" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse collapse-sub d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+    <li class="nav-item">
+    <a asp-page="/Portal/Portal" asp-route-pageNr="" class="nav-text align-middle px-0">
+    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Översikt</span>
+    </a>
+    </li>
+    </ul>
+    </div>
+    </nav>
+    </div>
+    </div>*@
+
+
     <div class="container-fluid">
         <div class="row">
 
-            <aside class="col-2">
-
-                <div class="row justify-content-center align-items-center">
-
-                    <div class="col-10 card shadow-2-strong" style="border-radius: 15px">
-                        <div class="card-body p-1 p-md-5">
-                            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-
-                                <li class="nav-item">
-                                    <a asp-page="/Portal/Portal" asp-route-pageNr="" class="nav-text align-middle px-0">
-                                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Översikt</span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a asp-page="/Portal/Ärende" class="nav-text align-middle px-0">
-                                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Ärenden</span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a asp-page="/Portal/Portal" asp-route-pageNr="1" class="nav-text align-middle px-0">
-                                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Dokument</span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a asp-page="/Portal/TabortSaker" class="nav-text align-middle px-0">
-                                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Radera Digitala spår</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+            <aside class="col flex-column" style="background-color: lightgreen">
+@*
+                <div class="">
+                    <a asp-page="/Portal/Portal" asp-route-pageNr="" class="btn-death">Översikt</a>
                 </div>
+
+                <div class="">
+                    <a asp-page="/Portal/Ärende" asp-route-pageNr="" class="btn-death mb-5">Ärenden</a>
+                </div>
+
+                <div class="">
+                    <a asp-page="/Portal/Portal" asp-route-pageNr="1" class="btn-death">Dokument</a>
+                </div>
+
+                <div class="">
+                    <a asp-page="/Portal/TabortSaker" asp-route-pageNr="" class="btn-death">Radera digitala spår</a>
+                </div>*@
+
+
+                    <a class="nav-link active" href="#">Active</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link disabled" href="#">Disabled</a>
+
+
+
+
+                <ul class="nav-sub text-center">
+                    <li class="nav-sub-item">
+                        <a asp-page="/Portal/Portal" asp-route-pageNr="" class="btn-death" style="margin-top: 50px;">Översikt</a>
+                    </li>
+                    <li class="nav-sub-item">
+                        <a asp-page="/Portal/Ärende" asp-route-pageNr="" class="btn-death mb-5">Ärenden</a>
+                    </li>
+                    <li class="nav-sub-item">
+                        <a asp-page="/Portal/Portal" asp-route-pageNr="1" class="btn-death">Dokument</a>
+                    </li>
+                    <li class="nav-sub-item">
+                        <a asp-page="/Portal/TabortSaker" asp-route-pageNr="" class="btn-death">Radera digitala spår</a>
+                    </li>
+                </ul>
+
+
+
+
             </aside>
 
             <div class="col-8 min-vh-100">
