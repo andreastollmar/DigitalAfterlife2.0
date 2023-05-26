@@ -59,7 +59,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <aside class="col flex-column" style="background-color: lightgreen">
+            <aside class="col-2 flex-column" style="background-color: lightgreen">
 @*
                 <div class="">
                     <a asp-page="/Portal/Portal" asp-route-pageNr="" class="btn-death">Översikt</a>
@@ -78,26 +78,26 @@
                 </div>*@
 
 
-                    <a class="nav-link active" href="#">Active</a>
+                 @*   <a class="nav-link active" href="#">Active</a>
                     <a class="nav-link" href="#">Link</a>
                     <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link disabled" href="#">Disabled</a>*@
 
 
 
 
                 <ul class="nav-sub text-center">
                     <li class="nav-sub-item">
-                        <a asp-page="/Portal/Portal" asp-route-pageNr="" class="btn-death" style="margin-top: 50px;">Översikt</a>
+                        <a asp-page="/Portal/Portal" asp-route-pageNr="" class="btn-death" style="margin-top: 50px; padding-inline: 60px;">Översikt</a>
                     </li>
                     <li class="nav-sub-item">
-                        <a asp-page="/Portal/Ärende" asp-route-pageNr="" class="btn-death mb-5">Ärenden</a>
+                        <a asp-page="/Portal/Ärende" asp-route-pageNr="" class="btn-death mb-5" style="padding-inline: 61px;">Ärenden</a>
                     </li>
                     <li class="nav-sub-item">
-                        <a asp-page="/Portal/Portal" asp-route-pageNr="1" class="btn-death">Dokument</a>
+                        <a asp-page="/Portal/Portal" asp-route-pageNr="1" class="btn-death" style="padding-inline: 55px;">Dokument</a>
                     </li>
                     <li class="nav-sub-item">
-                        <a asp-page="/Portal/TabortSaker" asp-route-pageNr="" class="btn-death">Radera digitala spår</a>
+                        <a asp-page="/Portal/TabortSaker" asp-route-pageNr="" class="btn-death" style="padding-inline: 16px;">Radera digitala spår</a>
                     </li>
                 </ul>
 
@@ -114,9 +114,9 @@
             <div class="col"></div>
         </div>
     </div>
-    <footer class="footer text-muted text-center text-white ">
+    <footer class="footer text-muted text-center text-white">
         <div class="container">
-            &copy; 2023 - DigitalAfterlife - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2023 - DigitalAfterlife - We Care</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

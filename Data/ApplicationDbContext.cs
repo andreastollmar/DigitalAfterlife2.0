@@ -13,5 +13,6 @@ namespace DigitalAfterlife2._0.Data
         public DbSet<DigitalAfterlife2._0.Models.NextOfKin> NextOfKin { get; set; } = default!;
         public DbSet<DigitalAfterlife2._0.Models.Perished> Perished { get; set; } = default!;
         public DbSet<DigitalAfterlife2._0.Models.File> File { get; set; }
+        public DbSet<DigitalAfterlife2._0.Models.ServiceToDelete> ServiceToDelete { get; set; }
     }
 }

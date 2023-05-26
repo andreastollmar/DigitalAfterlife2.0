@@ -5,4 +5,47 @@
 }
 
 
-<h1>Här ska vi koppla in API delen</h1>
+<h1>Välj vilka tjänster du vill att vi ska hitta och ta bort</h1>
+
+<p>Skriv info om hur det går till </p>
+
+
+
+<form method="post" class="text-dark">
+
+    <div class="form-group">
+        <label asp-for="ServiceToDelete.PerishedId" class="control-label"></label>
+        <select asp-for="ServiceToDelete.PerishedId" class="form-control" asp-items="ViewBag.PerishedId"></select>
+    </div>
+
+    
+    <table class="table">
+        <tr>
+            <th>Tjänst</th>
+            <th><i class="fa-regular fa-solid fa-check fa-lg" style="color: #11df33;"></i></th>
+            <th><i class="fa-regular fa-solid fa-xmark fa-lg" style="color: #e10909;"></i></th>
+        </tr>
+
+        @for(var i = 0; i < Model.StreamingServices.Count; i++)
+        {
+            <tr>
+                <input type="hidden" asp-for="@Model.StreamingServices[i].Id">
+
+                <td>
+                    <input type= "hidden" asp-for="@Model.StreamingServices[i].Name" value="@Model.StreamingServices[i].Name">
+                    @Model.StreamingServices[i].Name
+                </td>
+                <td>
+                    <input type="radio" value="true" asp-for="@Model.StreamingServices[i].IsChecked">
+                </td>
+                <td>
+                    <input type="radio" value="false" asp-for="@Model.StreamingServices[i].IsChecked">
+                </td>
+            </tr>
+        }
+
+
+    </table>
+
+    <input type="submit" class="btn-death" value="Spara" />
+</form>
