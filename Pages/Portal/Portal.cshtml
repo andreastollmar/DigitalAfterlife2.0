@@ -5,67 +5,100 @@
 }
 @if (Model.PageNr == 1) //dokument
 {
-    <div class="container text-center">
-        <h1 class="display-2">Välj ett dokument att ladda upp</h1>
-            <p>
+    <h1 class="display-2 mb-3 text-center">Välj ett dokument att ladda upp</h1>
+    <p class="text-center mb-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    </div>
-    <br />
-    <hr />
-    <h2 class="fw-bold">Dödscertifikat</h2>
-    <p>Här laddar du upp den avlidnes dödscertifikat, du får den av blabla</p>
+    <hr class="mb-4 mt-4" />
+    <h2>Dödscertifikat</h2>
     <p>
+        Här laddar du upp den avlidnes dödscertifikat, du får den av blabla
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    <br />
     <p class="fw-bold">Välj att ladda hem en befintlig mall från våran sida eller ladda upp ett eget intyg.</p>
-    <a class="btn btn-primary" asp-page="deathcert">Ladda upp ett eget dödscertifikat</a>
-    <a class="btn btn-primary mx-2" asp-page="deathcert">Ladda hem en mall (lägg till länk)</a>
-    <br />
-    <hr />
-    <h2 class="fw-bold">Fullmakt</h2>
-    <p>Här laddar du upp en fullmakt, som ger oss möjlighet att agera i erat namn.</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <br />
-    <p class="fw-bold">Välj att ladda hem en befintlig mall från våran sida eller ladda upp ett eget intyg.</p>
-    <a class="btn btn-primary" asp-page="Fullmakt">Ladda upp en egen fullmakt</a>
-    <a class="btn btn-primary mx-2" asp-page="Fullmakt">Ladda hem en mall (lägg till länk)</a>
+    <a class="da-btn-primary" asp-page="deathcert">Ladda upp ett nytt certifikat</a>
+    <a class="da-btn-primary" asp-page="#">Se ditt uppladdade certifikat</a>
+    <hr class="mb-4 mt-4" style="width: 500px" />
+    <p class="fw-bold">Se ditt uppladdade certifikat  - SKA LIGGA I ETT IF-STATEMENT</p>
+    <a class="da-btn-primary" asp-page="#">Dödscertifikat</a>
+    <hr class="mb-4 mt-4" />
 
+    <h2>Fullmakt</h2>
+    <p>
+        Här laddar du upp en fullmakt, som ger oss möjlighet att agera i erat namn.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <p class="fw-bold">Välj att ladda hem en befintlig mall från våran sida eller ladda upp ett eget intyg.</p>
+    <a class="da-btn-primary" asp-page="Fullmakt">Ladda upp en egen fullmakt</a>
+    <hr class="mb-4 mt-4" style="width: 500px" />
+    <p class="fw-bold">Se din uppladdade fullmakt - SKA LIGGA I ETT IF-STATEMENT</p>
+    <a class="da-btn-primary" asp-page="#">Fullmakt</a>
+
+    <hr class="mb-4 mt-4" />
+
+    <h2>Mallar</h2>
+    <p>
+        Här laddar du upp en fullmakt, som ger oss möjlighet att agera i erat namn.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <p class="fw-bold">Välj ifall du vill ladda hem en befintlig mall av en fullmakt eller dödscertifikat.</p>
+    <a class="da-btn-primary" asp-page="#">Dödscertifikat</a>
+    <a class="da-btn-primary mx-2" asp-page="#">Fullmakt</a>
 }
 else //översikt
 {
     @if (Model.Perished != null && Model.Perished.Count > 0)
     {
-        <h1 class="display-2 text-center">Dina pågående ärenden</h1>
-        <hr />
+        <h1 class="display-2 mb-3 text-center">Översikt</h1>
+        <p class="text-center mb-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <hr class="mb-4 mt-4" />
+
         foreach (var p in Model.Perished)
         {
-            <div class="d-flex">
-                <h2 class="fw-bold mx-3">@p.FirstName @p.LastName (@p.BirthDate-@p.SocialSecurity)</h2>
-                <a class="btn btn-primary" asp-page="Ärende">Se ärende</a>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="fw-bold">@p.FirstName @p.LastName (@p.BirthDate-@p.SocialSecurity) </h2>
+                        </div>
+                        <div class="col m-auto">
+                            <a class="da-btn-primary" asp-page="Ärende" style="margin-left: -90px;">Se ärende</a>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
             </div>
-            <hr />
+            <hr class="mb-4 mt-4" />
         }
     }
     else
     {
         <h1 class="display-4 text-center">Du har inga pågående ärenden.</h1>
-        <a asp-page="PerishedInfo" class="btn btn-primary">Skapa ärende</a>
+        <a asp-page="PerishedInfo" class="da-btn-primary">Skapa ärende</a>
     }
 }
 
