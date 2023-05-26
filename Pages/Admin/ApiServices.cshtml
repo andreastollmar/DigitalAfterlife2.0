@@ -5,7 +5,7 @@
 }
 @if (Model.StreamingServices != null)
 {
-    <table class="table">
+    <table class="table mt-3">
         @for (int i = 1; i <= Model.StreamingServices.Count; i++)
         {
             <tr>
@@ -29,7 +29,7 @@
 }
 
 
-<form method="post">
+<form method="post" class="text-dark">
     <input asp-for="@Model.NewStreamingService.Id" type="hidden" />
 
     <label asp-for="@Model.NewStreamingService.Name">Namn på tjänst</label>

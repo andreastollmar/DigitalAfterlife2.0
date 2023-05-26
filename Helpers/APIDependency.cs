@@ -5,7 +5,7 @@ namespace DigitalAfterlife2._0.Helpers
 {
     public class APIDependency
     {
-        private static Uri BaseAddress = new Uri("https://localhost:44338/"); // ändra om api inte kommer upp
+        private static Uri BaseAddress = new Uri("https://digitalafterlifeapi.azurewebsites.net/"); // ändra om api inte kommer upp
 
         public APIDependency()
         {
