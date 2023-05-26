@@ -57,6 +57,7 @@ p {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    font-size: 18px;
 }
 
 h2 {
@@ -74,13 +75,6 @@ h6 {
     letter-spacing: 0.1rem;
     color: #24201f;
 }
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
 
 .bg-cream {
     background-color: #f6f2ed !important;
@@ -126,14 +120,6 @@ h6 {
 .mb-5,
 .my-5 {
     margin-bottom: 3rem !important;
-}
-
-@media (min-width: 965px) {
-    .container,
-    .frontpage {
-        max-width: 1360px;
-        padding: 0 2rem;
-    }
 }
 
 .nav-sub {
@@ -334,3 +320,112 @@ h6 {
     left: 0;
     right: 0;
 }
+
+
+
+/*RESPONSIVENESS*/
+
+/*EXTRA SMALL*/
+@media (max-width: 575px) {
+
+    body {
+        background-color: red;
+    }
+
+    h1 {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /*    .bilden {
+        display: block;
+        padding: 0 5px;
+        margin: auto;
+        right: 0;
+        position: static;
+    }*/
+
+    img[src="http://via.placeholder.com/1500x1100"] {
+        content: url("http://via.placeholder.com/360x360");
+    }
+}
+
+/*SMALL*/
+@media (min-width: 576px) {
+    body {
+        background-color: blue;
+    }
+
+    .div {
+        display: block;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+
+    .bilden {
+    }
+
+    .bilden-sm {
+    }
+}
+
+/*MEDIUM*/
+@media (min-width: 768px) {
+    body {
+        background-color: green;
+    }
+}
+
+/*LARGE*/
+@media (min-width: 992px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+/*EXTRA LARGE*/
+@media (min-width: 1200px) {
+    body {
+        background-color: black;
+    }
+}
+
+
+
+
+
+/*@media (min-width: 965px) {
+    .container,
+    .frontpage {
+        max-width: 1360px;
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        display: block;
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 32px;
+    }
+}*/

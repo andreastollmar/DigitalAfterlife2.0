@@ -8,28 +8,35 @@
 }
 <div class="front-page bg-white">
     <div class="row">
-        <div class="hero-section mb-5">
+        <div class="hero-section col-sm-6 mb-5">
             <div class="row mb-4 py-4">
+
                 <div class="col-lg-10 offset-lg-1">
+
                     <div class="row">
-                        <div class="d-flex justify-content-center align-items-center col-lg-5 offset-lg-1 order-lg-1 hero-left">
+
+                        <div class="d-flex justify-content-center align-items-center col-lg-5 col-md-2 col-sm-4 offset-lg-1 order-lg-1 hero-left">
+
                             <div class="p-2">
                                 <h1 class="header-h1 mb-4">
                                     Hitta digitala fotspår
                                     <br />
                                     från dem du älskar mest!
                                 </h1>
-                                <p class="font-xl pb-4">
+                                <p class="pb-4">
                                     Genom att använda våra tjänster så får du tillgång till allt vi kan hitta om en närstående.
-                                     Du kan då gå igenom allt i lugn och ro och sen välja vad du vill göra med innehållet.
-                                     
+                                    Du kan då gå igenom allt i lugn och ro och sen välja vad du vill göra med innehållet.
                                 </p>
-                                <a class="da-btn-primary m-auto" asp-area="Identity" asp-page="/Account/Register">Bli medlem!</a>
+                                <a class="da-btn-nav m-auto" asp-area="Identity" asp-page="/Account/Register">Bli medlem!</a>
                             </div>
                         </div>
-                        <div class="col-lg-5 offset-lg-1 order-lg-2 hero-right">
-                            <img src="http://via.placeholder.com/1500x1100" />
+
+                        <div class="col-lg-5 col-sm-4 offset-lg-1 order-lg-2 hero-right">
+                            <img class="bilden" src="http://via.placeholder.com/1500x1100" />
+@*                            <img class="bild-sm .d-none .d-sm-block .d-md-none" src="http://via.placeholder.com/300x300" />*@
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -59,8 +66,8 @@
                                 <h3 class="header-h3 mb-4">AMBITION</h3>
                                 <p class="font-xl">
                                     Vi strävar efter att göra det som man inte alltid tänker på att göra.
-                                    Vi jobbar hårt för att du ska få det så smidigt som möjligt när du behöver 
-                                    ta hand om en omkommes digitala efterliv. Genom att samla allt på en plats 
+                                    Vi jobbar hårt för att du ska få det så smidigt som möjligt när du behöver
+                                    ta hand om en omkommes digitala efterliv. Genom att samla allt på en plats
                                     kommer det underlätta både för er och alla inblandade parter.
                                 </p>
                             </div>
@@ -82,9 +89,9 @@
                             <div class="p-2">
                                 <h3 class="header-h3 mb-4">KUNSKAP</h3>
                                 <p class="font-xl">
-                                    Vårat team innehar en bred kunskap inom det berörda området. Vi sammarbetar med 
+                                    Vårat team innehar en bred kunskap inom det berörda området. Vi sammarbetar med
                                     jurister, begravningsbyråer och de stora bolagen för att kunna tillgodose det som krävs
-                                     för att just du ska få den hjälpen som behövs.
+                                    för att just du ska få den hjälpen som behövs.
                                 </p>
                             </div>
                         </div>
@@ -103,8 +110,8 @@
                                 <p class="font-xl">
                                     Utöver att göra det enkelt och smidigt för er alla så strävar vi även efter an minskad
                                     miljöpåverkan. Allt som lagras online tar plats och det behövs fler och fler serverhallar
-                                     för att kunna möta dagens efterfrågan. Dessa enorma servrarna tar på jordens resurser och vi måste
-                                      göra vår instats för att säkra framtiden.
+                                    för att kunna möta dagens efterfrågan. Dessa enorma servrarna tar på jordens resurser och vi måste
+                                    göra vår instats för att säkra framtiden.
                                 </p>
                             </div>
                         </div>
@@ -115,8 +122,7 @@
                 </div>
             </div>
             <div class="home-page-cta d-none d-md-block pb-4 text-center">
-                <a class="da-btn-primary m-auto" asp-area="Identity" asp-page="/Account/Login">Logga in</a>
-                <a class="da-btn-primary m-auto" asp-area="Identity" asp-page="/Account/Register">Registrera</a>
+                <a class="da-btn-nav m-auto" asp-area="Identity" asp-page="/Account/Register">Registrera</a>
             </div>
         </div>
     </div>
@@ -227,3 +233,29 @@
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+
+
+
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+
+
+
+  *@
