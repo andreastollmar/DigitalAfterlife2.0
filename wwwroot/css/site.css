@@ -18,6 +18,10 @@ html {
     font-size: 14px;
 }
 
+body {
+    background-color: #fff;
+}
+
 .row,
 .container-fluid {
     padding: 0;
@@ -32,6 +36,10 @@ html {
 
 div {
     display: block;
+}
+
+.font-l {
+    font-size: 16px;
 }
 
 .font-xl,
@@ -49,6 +57,11 @@ p {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
 }
 
 h1,
@@ -123,6 +136,22 @@ h6 {
     }
 }
 
+.nav-sub{
+    margin-top: 140px;
+    
+}
+
+.nav-sub-item {
+    width: 200px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-sub-item > li {
+    width: 150px;
+}
+
 /*hette från början .nav-link */
 .nav-text {
     text-decoration: none;
@@ -187,7 +216,6 @@ h6 {
 }
 
 .step-section {
-
 }
 
 .review-section {
@@ -199,13 +227,6 @@ h6 {
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
-
-
-body {
-    background-color: #fff;
-}
-
-
 
 /*Start regform*/
 
@@ -241,10 +262,21 @@ body {
         color: white;
     }
 
+/*Ändrade footer i vanliga _layout.*/
 .footer {
     height: 150px;
     background-color: black;
     padding-top: 4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-manage {
+    height: 150px;
+    background-color: black;
+    padding-top: 4rem;
+    margin-top: 50px;
     bottom: 0;
     left: 0;
     right: 0;
