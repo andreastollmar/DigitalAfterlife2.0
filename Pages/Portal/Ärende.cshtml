@@ -4,58 +4,69 @@
     Layout = "_InloggningsPortal";
 }
 
-<div class="container-fluid text-white">
+<div class="container-fluid text-dark">
     <h1 class="display-2 mb-3 text-center">Dina pågående ärenden</h1>
-    <p class="text-center">
+    <p class="text-center mb-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    <a class="btn btn-primary" asp-page="PerishedInfo">Skapa nytt ärende</a>
-    <hr>
+    <div class="text-center">
+        <a class="da-btn-primary" asp-page="PerishedInfo">Skapa nytt ärende</a>
+    </div>
+    <hr class="mb-4 mt-4" />
 
     @foreach (var p in Model.Perished)
     {
-        <div class="row">
-            <div class="col-6 text-start">
-                <div>
-                    <h3>Ärendenummer: @p.Id</h3>
-                    <p>Namn: @p.FirstName @p.LastName</p>
-                    <p>Personnummer: @p.BirthDate-@p.SocialSecurity</p>
-                    <p>Kön: @p.Gender</p>
-                    <p>Telefon: @p.PhoneNumber</p>
-                    <p>Email: @p.Email</p>
-                    <p>Kreditkort: @p.CreditCardNumber</p>
+        <div class="mb-4">
+            <div class="row">
+                <div class="col-6 text-start">
+                    <div>
+                        <h2>Ärendenummer: @p.Id</h2>
+                        <p>
+                            <span class="fw-bold font-l">Namn: </span>@p.FirstName @p.LastName<br>
+                            <span class="fw-bold font-l">Personnummer: </span>@p.BirthDate-@p.SocialSecurity<br>
+                            <span class="fw-bold font-l">Kön: </span>@p.Gender<br>
+                            <span class="fw-bold font-l">Telefon: </span>@p.PhoneNumber<br>
+                            <span class="fw-bold font-l">Email: </span>@p.Email<br>
+                            <span class="fw-bold font-l">Kreditkort: </span>@p.CreditCardNumber<br>
+                        </p>
+                    </div>
+                    <a class="da-btn-primary" asp-page="#">Hämtad data</a>
+                    <a class="btn btn-danger" asp-page="#">Avsluta ärende</a>
+                </div>
+
+
+                <div class="col-6 text-center m-auto">
+                    @if (@p.Deathcert == true)
+                    {
+                        <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Det finns ett dödscertifikat registrerat för @p.FirstName.</p>
+                    }
+                    else
+                    {
+                        <p><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e41b2f;"></i> Det finns inget dödscertifikat registrerat på @p.FirstName.<br>Ladda upp <a asp-page="Deathcert">här</a></p>
+                    }
+                    @if (@p.Fullmakt == true)
+                    {
+                        <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Det finns en fullmakt registrerad för @p.FirstName.</p>
+                    }
+                    else
+                    {
+                        <p><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e41b2f;"></i> Det finns ingen fullmakt registrerat på @p.FirstName.<br>Ladda upp <a asp-page="Fullmakt">här</a></p>
+                    }
+                    @if (@p.Deathcert == true && @p.Fullmakt == true)
+                    {
+                        <p>Bra jobbat! Både fullmakt och dödscertifikat är uppladdat så det ända du behöver göra nu är att invänta vårat svar. <br />Har du fyllt i all info?</p>
+                    }
                 </div>
             </div>
-
-
-            <div class="col-6 text-center m-auto">
-                @if (@p.Deathcert == true)
-                {
-                    <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Det finns ett dödscertifikat registrerat för @p.FirstName.</p>
-                }
-                else
-                {
-                    <p><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e41b2f;"></i> Det finns inget dödscertifikat registrerat på @p.FirstName.<br>Ladda upp <a asp-page="Deathcert">här</a></p>
-                }
-                @if (@p.Fullmakt == true)
-                {
-                    <p><i class="fa-solid fa-circle-check" style="color: #2fca42;"></i> Det finns en fullmakt registrerad för @p.FirstName.</p>
-                }
-                else
-                {
-                    <p><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #e41b2f;"></i> Det finns ingen fullmakt registrerat på @p.FirstName.<br>Ladda upp <a asp-page="Fullmakt">här</a></p>
-                }
-                @if (@p.Deathcert == true && @p.Fullmakt == true)
-                {
-                    <p>Bra jobbat! Både fullmakt och dödscertifikat är uppladdat så det ända du behöver göra nu är att invänta vårat svar. <br />Har du fyllt i all info?</p>
-                }
-            </div>
+            <hr class="mb-4">
         </div>
-        <hr>
+
+
+
     }
     <div class="text-center">
         <h3>Behöver du hjälp eller har du skrivit fel på någon uppgift?</h3>
