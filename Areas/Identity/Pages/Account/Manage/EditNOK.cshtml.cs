@@ -25,27 +25,36 @@ namespace DigitalAfterlife2._0.Areas.Identity.Pages.Account.Manage
         public async Task<IActionResult> OnPostAsync()
         {
             
-            
-                
-                
-            var user = _context.NextOfKin.Where(x => x.LoginId == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
-                
-            // kolla vad som behöver vara kvar
+            var check = _context.NextOfKin.Where(x => x.LoginId == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
 
-            NextOfKin.LoginId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            user.City = NextOfKin.City;
-            user.LastName = NextOfKin.LastName;
-            user.PhoneNumber = NextOfKin.PhoneNumber;
-            user.Email = NextOfKin.Email;
-            user.StreetAddress = NextOfKin.StreetAddress;
-            user.ZipCode = NextOfKin.ZipCode;
-            user.LoginId = NextOfKin.LoginId;
-            user.Country = NextOfKin.Country;
-            user.Gender = NextOfKin.Gender;
-            _context.NextOfKin.Update(user);
-            await _context.SaveChangesAsync();
+            if(check != null)
+            {
+
+                var user = _context.NextOfKin.Where(x => x.LoginId == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
                 
-            
+                // kolla vad som behöver vara kvar
+
+                NextOfKin.LoginId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                user.City = NextOfKin.City;
+                user.LastName = NextOfKin.LastName;
+                user.PhoneNumber = NextOfKin.PhoneNumber;
+                user.Email = NextOfKin.Email;
+                user.StreetAddress = NextOfKin.StreetAddress;
+                user.ZipCode = NextOfKin.ZipCode;
+                user.LoginId = NextOfKin.LoginId;
+                user.Country = NextOfKin.Country;
+                user.Gender = NextOfKin.Gender;
+                _context.NextOfKin.Update(user);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                NextOfKin.LoginId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                _context.Add(NextOfKin);
+                await _context.SaveChangesAsync();
+            }
+
+
 
 
             return RedirectToPage("/Portal/Portal");

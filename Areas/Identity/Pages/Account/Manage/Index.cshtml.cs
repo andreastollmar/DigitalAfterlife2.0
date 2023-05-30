@@ -28,6 +28,10 @@ namespace DigitalAfterlife2._0.Areas.Identity.Pages.Account.Manage
         public async Task<IActionResult> OnGetAsync()
         {
             NextOfKin = _context.NextOfKin.Where(x => x.LoginId == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
+            if (NextOfKin == null)
+            {
+                return RedirectToPage("/Account/Manage/EditNOK");
+            }
             return Page();
         }
 
