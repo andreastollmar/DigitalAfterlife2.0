@@ -316,45 +316,66 @@ h6 {
     right: 0;
 }
 
+/*.feature-img,
+.step-img {
+    width: 400px;
+}*/
+
 
 /*RESPONSIVENESS*/
 
 /*@media only screen and (max-width: 600px) and (min-width: 400px)*/
 
 /*Middle sized screens*/
-@media (min-width: 1199px) {
-    body {
-        background-color: red;
+@media (min-width: 769px) and (max-width: 1199px) {
+    
+
+    .hero-img{
+        width: 700px;
     }
 
     .feature-img,
     .step-img {
-        width: 500px;
+        width: 400px;
     }
 
-    .step-img {
-        width: 800px;
+
+    .hero-section {
+        height: 950px;
     }
+    
 
     .img-cont {
         margin: auto;
+        text-align: center;
     }
 
     .small-divider {
         width: 350px;
     }
-
+    .hero-right {
+        margin: auto;
+    }
     .header-h1,
     .hero-p {
         text-align: center;
     }
-
-    .header-h3 {
-        font-weight: bold;
+    .font-xl{
+        font-size: 14px;
+    }
+    
+    .review-header-h2 {
+        font-weight: 500;
     }
 
-    .da-btn-nav {
-        margin-left: 278px;
+    .header-h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+   
+    .cta {
+        text-align: center;
+        margin: auto;
     }
 }
 
@@ -372,17 +393,18 @@ h6 {
 
     .hero-img {
         width: 520px;
-
-
+    }
+    .hero-section{
+        height: 800px;
     }
 
     .hero-right {
-
-        border: 2px solid green;
+        margin:auto;
     }
 
-    .koko {
-
+    .feature-section{
+        display: block;
+        text-align: center;
     }
 
     .img-cont {
@@ -400,6 +422,9 @@ h6 {
 
     .header-h3 {
         font-weight: bold;
+        text-align: center;
+        font-size: 36px;
+        
     }
 
     .cta {
@@ -442,6 +467,9 @@ h6 {
     .header-h3 {
         text-align: center;
         font-weight: bold;
+    }
+    .img-cont{
+        text-align: center;
     }
 
     .small-divider {
