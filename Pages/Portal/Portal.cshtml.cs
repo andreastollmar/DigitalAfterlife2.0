@@ -29,7 +29,7 @@ namespace DigitalAfterlife2._0.Pages.Portal
             
             if (check == null)
             {
-               //  return RedirectToPage("./Account/Index"); fixa 
+                return RedirectToPage("/Account/Manage/EditNOK", new { area = "Identity" });
             }
             if(check != null)
             {
