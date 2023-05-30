@@ -7,60 +7,56 @@
     Layout = "_FrontpageTest";
 }
 <div class="front-page bg-white">
-    <div class="row">
-        <div class="hero-section col-sm-6 mb-5">
-            <div class="row mb-4 py-4">
+    <div class="row container-fluid hero-section">
+        <div class="row mb-4 py-4">
+            <div class="col-sm-12 col-md-12">
+                <div class="row">
+                    <div class="hero-left col-sm-6 col-md-12 m-auto">
 
-                <div class="col-lg-10 offset-lg-1">
 
-                    <div class="row">
-
-                        <div class="d-flex justify-content-center align-items-center col-lg-5 col-md-2 col-sm-4 offset-lg-1 order-lg-1 hero-left">
-
-                            <div class="p-2">
-                                <h1 class="header-h1 mb-4">
-                                    Hitta digitala fotspår
-                                    <br />
-                                    från dem du älskar mest!
-                                </h1>
-                                <p class="pb-4">
-                                    Genom att använda våra tjänster så får du tillgång till allt vi kan hitta om en närstående.
-                                    Du kan då gå igenom allt i lugn och ro och sen välja vad du vill göra med innehållet.
-                                </p>
-                                <a class="da-btn-nav m-auto" asp-area="Identity" asp-page="/Account/Register">Bli medlem!</a>
+                        <div class="p-2 col-sm-12 col-md-12 order-sm-1">
+                            <h1 class="header-h1 mb-4">
+                                Hitta digitala fotspår
+                                <br />
+                                från dem du älskar mest!
+                            </h1>
+                            <p class="hero-p pb-4 font-xl">
+                                Genom att använda våra tjänster så får du tillgång till allt vi kan hitta om en närstående.
+                                Du kan då gå igenom allt i lugn och ro och sen välja vad du vill göra med innehållet.
+                            </p>
+                            <div class="cta">
+                                <a class="da-btn-nav" asp-area="Identity" asp-page="/Account/Register">Bli medlem!</a>
                             </div>
-                        </div>
-
-                        <div class="col-lg-5 col-sm-4 offset-lg-1 order-lg-2 hero-right">
-                            <img class="bilden" src="http://via.placeholder.com/1500x1100" />
-@*                            <img class="bild-sm .d-none .d-sm-block .d-md-none" src="http://via.placeholder.com/300x300" />*@
                         </div>
 
 
                     </div>
+                    <div class="hero-right col-md-12 p-4">
+                        <div class="col-sm-12 col-md-12">
+                            <img class="hero-img" src="~/content/uploads/pexels-miguel-á-padriñán-255379.jpg" />
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
     </div>
+
     <div class="feature-section bg-vanlig br-16 pb-5 mb-5 pt-5 mt-5">
         <div class="container">
-
-
-
             <div class="feature-title row">
-                <div class="col text-center" style="padding: 0px 15px;">
+                <div class="col text-center ">
                     <h2 class="header-h2">
                         Vår vision
                     </h2>
                 </div>
             </div>
 
-
-
-            <div class="row mb-4 py-4">
-                <div class="col-lg-10 offset-lg-1">
+            <div class="row container mb-4 py-4">
+                <div class="col-sm-12 col-md-12">
                     <div class="row">
-                        <div class="d-flex justify-content-center align-items-center col-lg-5 offset-lg-1 order-lg-1">
+                        <div class="justify-content-center align-items-center col-lg-6 col-md-6 order-lg-1 order-md-1 col-sm-6">
                             <div class="p-2"
                                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
                                 <h3 class="header-h3 mb-4">AMBITION</h3>
@@ -72,20 +68,17 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-5 offset-lg-1 order-lg-2">
-                            <img src="http://via.placeholder.com/440x360" />
+                        <div class="img-cont col-lg-6 col-md-6 order-md-2 order-lg-2 col-sm-12">
+                            <img class="feature-img" src="~/content/uploads/pexels-miguel-á-padriñán-255379.jpg" />
                         </div>
                     </div>
                 </div>
             </div>
 
-
-
-
             <div class="row mb-4 py4">
-                <div class="col-lg-10 offset-lg-1">
+                <div class="col-lg-10 col-md-12 offset-lg-1">
                     <div class="row">
-                        <div class="d-flex justify-content-center align-items-center col-lg-5 offset-lg-1 order-lg-2">
+                        <div class="d-flex justify-content-center align-items-center col-lg-5 col-md-6 offset-lg-1 order-md-2 order-lg-2">
                             <div class="p-2">
                                 <h3 class="header-h3 mb-4">KUNSKAP</h3>
                                 <p class="font-xl">
@@ -95,16 +88,16 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-5 offset-lg-1 order-lg-1">
-                            <img src="http://via.placeholder.com/440x360" />
+                        <div class="img-cont col-lg-6 order-lg-2 order-md-1 col-md-6 col-sm-12">
+                            <img class="feature-img" src="~/content/uploads/pexels-miguel-á-padriñán-255379.jpg" />
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row mb-4 py-4">
-                <div class="col-lg-10 offset-lg-1">
+                <div class="col-lg-10 col-md-12 offset-lg-1">
                     <div class="row">
-                        <div class="d-flex justify-content-center align-items-center col-lg-5 offset-lg-1 order-lg-1">
+                        <div class="d-flex justify-content-center align-items-center col-lg-5 offset-lg-1 col-md-6 order-md-1 order-lg-1">
                             <div class="p-2">
                                 <h3 class="header-h3 mb-4">MÅL</h3>
                                 <p class="font-xl">
@@ -115,8 +108,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-5 offset-lg-1 order-lg-2">
-                            <img src="http://via.placeholder.com/440x360" />
+                        <div class="img-cont col-lg-6 order-lg-2 order-md-2 col-md-6 col-sm-12">
+                            <img class="feature-img" src="~/content/uploads/pexels-miguel-á-padriñán-255379.jpg" />
                         </div>
                     </div>
                 </div>
@@ -132,32 +125,19 @@
     <hr />
 </div>
 
-<div class="step-section mb-5 mt-5">
+<div class="step-section container mb-5 mt-5">
     <div class="row">
-        <div class="col">
-            <div class="row">
-
-                <div class="col-1" style="background-color: red"></div>
-
-                <div class="col mx-5 text-center" style="border: 2px solid red">
-                    <h4>Steg 1: Registrera</h4>
-                    <img src="http://via.placeholder.com/500x400" />
-                </div>
-
-
-                <div class="col text-center" style="border: 2px solid blue">
-                    <h4>Steg 2: Fyll i uppgifter</h4>
-                    <img src="http://via.placeholder.com/200x360" />
-                </div>
-
-                <div class="col mx-5 text-center" style="border: 2px solid green">
-                    <h4>Steg 3: Skicka in och invänta återkopplning</h4>
-                    <img src="http://via.placeholder.com/200x360" />
-                </div>
-
-                <div class="col-1" style="background-color: red"></div>
-
-            </div>
+        <div class="col-sm-12 text-center py-5">
+            <h4 class="pb-2">Steg 1: Registrera</h4>
+            <img class="step-img" src="~/content/uploads/pexels-miguel-á-padriñán-255379.jpg" />
+        </div>
+        <div class="col-sm-12 text-center py-5">
+            <h4 class="pb-2">Steg 2: Fyll i uppgifter</h4>
+            <img class="step-img" src="~/content/uploads/pexels-miguel-á-padriñán-255379.jpg" />
+        </div>
+        <div class="col-sm-12 text-center py-5">
+            <h4 class="pb-2">Steg 3: Skicka in och invänta återkopplning</h4>
+            <img class="step-img" src="~/content/uploads/pexels-miguel-á-padriñán-255379.jpg" />
         </div>
     </div>
 </div>
@@ -168,58 +148,43 @@
 
 <div class="review-section bg-vanlig br-16 pb-5 mb-5 pt-5 mt-5">
     <div class="container">
-
+        <div class="review-title row">
+            <div class="col text-center mb-5">
+                <h2 class="review-header-h2">
+                    Hör vad våra kunder <br /> säger om oss..
+                </h2>
+            </div>
+        </div>
+        <hr class="small-divider m-auto mt-5 mb-5 d-lg-none" />
         <div class="row">
-            <div class="col">
-                <div class="row">
-
-                    <div class="col-1"></div>
-
-                    <div class="col mx-5 text-center">
-
-                        <h3 class="py-2">
-                            "Digital Afterlife hjälpte mig så otroligt mycket. Jag rekommenderar detta
-                            starkt för alla som mist någon närstående."
-                        </h3>
-                        <p> -Klas</p>
-                    </div>
-
-
-                    <div class="col text-center">
-
-                        <h3 class="py-2">
-                            "Magiskt arbete av personalen på DA. Underlättade otroligt mycket när jag behövde stänga ner
-                            delar av min mans digitala tjänster"
-                        </h3>
-                        <p> -Birgitta</p>
-                    </div>
-
-                    <div class="col mx-5 text-center">
-
-                        <h3 class="py-2">
-                            "Fem av fem möjliga. Gud vad skönt det vara att slippa tänka på dessa saker som sköts
-                            av er på Afterlife!"
-                        </h3>
-                        <p> -Sofie</p>
-                    </div>
-
-                    <div class="col-1"></div>
-
+            <div class="col-sm-12 col-md-12 text-center">
+                <div class="col-sm-12 col-md-10 offset-md-1">
+                    <h3 class="pt-2">
+                        "Digital Afterlife hjälpte mig så otroligt mycket. Jag rekommenderar detta
+                        starkt för alla som mist någon närstående."
+                    </h3>
+                    <p class="sign"> -Klas</p>
+                </div>
+                <hr class="small-divider m-auto mt-5 mb-5 d-lg-none" />
+                <div class="col-sm-12 col-md-10 offset-md-1">
+                    <h3 class="pt-2">
+                        "Magiskt arbete av personalen på DA. Underlättade otroligt mycket när jag behövde stänga ner
+                        delar av min mans digitala tjänster"
+                    </h3>
+                    <p class="sign"> -Birgitta</p>
+                </div>
+                <hr class="small-divider m-auto mt-5 mb-5 d-lg-none" />
+                <div class="col-sm-12 col-md-10 offset-md-1">
+                    <h3 class="pt-2">
+                        "Fem av fem möjliga. Gud vad skönt det vara att slippa tänka på dessa saker som sköts
+                        av er på Afterlife!"
+                    </h3>
+                    <p class="sign"> -Sofie</p>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
-
-<div class="container">
-    <hr />
-</div>
-
-
-
-
-
 
 
 @*FOOTER*@
@@ -249,13 +214,13 @@
 
 
 
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+                    xs: 0,
+                    sm: 576px,
+                    md: 768px,
+                    lg: 992px,
+                    xl: 1200px,
+                    xxl: 1400px
 
 
 
-  *@
+                    *@

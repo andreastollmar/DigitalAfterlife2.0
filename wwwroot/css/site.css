@@ -172,22 +172,17 @@ h6 {
 
 .hero-section {
     position: relative;
-    height: 1100px;
+    height: 1150px;
 }
 
 .hero-left {
-    position: absolute;
     z-index: 100;
     width: 700px;
-    top: 300px;
-    left: 50px;
 }
 
 .hero-right {
-    position: absolute;
     z-index: 1;
-    right: 700px;
-    top: 5px;
+    width: fit-content
 }
 
 .feature-section {
@@ -322,14 +317,135 @@ h6 {
 }
 
 
-
 /*RESPONSIVENESS*/
 
-/*EXTRA SMALL*/
-@media (max-width: 575px) {
+/*@media only screen and (max-width: 600px) and (min-width: 400px)*/
 
+/*Middle sized screens*/
+@media (min-width: 1199px) {
     body {
         background-color: red;
+    }
+
+    .feature-img,
+    .step-img {
+        width: 500px;
+    }
+
+    .step-img {
+        width: 800px;
+    }
+
+    .img-cont {
+        margin: auto;
+    }
+
+    .small-divider {
+        width: 350px;
+    }
+
+    .header-h1,
+    .hero-p {
+        text-align: center;
+    }
+
+    .header-h3 {
+        font-weight: bold;
+    }
+
+    .da-btn-nav {
+        margin-left: 278px;
+    }
+}
+
+/*MEDIUM or Ipad MINI*/
+@media (min-width: 576px) and (max-width: 768px) {
+
+    .feature-img,
+    .step-img {
+        width: 310px;
+    }
+
+    .step-img {
+        width: 500px;
+    }
+
+    .hero-img {
+        width: 520px;
+
+
+    }
+
+    .hero-right {
+
+        border: 2px solid green;
+    }
+
+    .koko {
+
+    }
+
+    .img-cont {
+        margin: auto;
+    }
+
+    .small-divider {
+        width: 350px;
+    }
+
+    .header-h1,
+    .hero-p {
+        text-align: center;
+    }
+
+    .header-h3 {
+        font-weight: bold;
+    }
+
+    .cta {
+        text-align: center;
+        margin: auto;
+    }
+}
+
+
+/*EXTRA SMALL or Samsung Galaxy S20 ULTRA*/
+@media (max-width: 575px) {
+
+    .hero-section {
+        display: block;
+        text-align: center;
+        height: 500px;
+        margin-bottom: 100px;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    .feature-section {
+    }
+
+    .feature-img,
+    .step-img {
+        width: 270px;
+    }
+
+    .header-h1 {
+        text-align: center;
+    }
+
+    .header-h2 {
+        font-size: 48px;
+    }
+
+    .header-h3 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .small-divider {
+        width: 200px;
     }
 
     h1 {
@@ -338,46 +454,27 @@ h6 {
 
     p {
         font-size: 14px;
+        text-align: center;
     }
 
-    /*    .bilden {
-        display: block;
-        padding: 0 5px;
-        margin: auto;
-        right: 0;
-        position: static;
-    }*/
-
-    img[src="http://via.placeholder.com/1500x1100"] {
-        content: url("http://via.placeholder.com/360x360");
+    .sign {
+        font-weight: bold;
+        font-size: 16px;
     }
+
+    .review-header-h2 {
+        font-size: 36px;
+    }
+
 }
 
-/*SMALL*/
-/*@media (min-width: 576px) {
-    body {
-        background-color: blue;
+/*Iphone 12 PRO*/
+@media (max-width: 390px) {
+    .feature-img,
+    .step-img {
+        width: 250px;
     }
-
-    .div {
-        display: block;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-
-    .bilden {
-    }
-
-    .bilden-sm {
-    }
-}*/
+}
 
 
 /*LARGE*/
@@ -393,40 +490,4 @@ h6 {
         background-color: black;
     }
 }*/
-/*
-MEDIUM*/
-/*@media (max-width: 768px) {
-    body {
-        background-color: green;
-    }
-}*/
 
-
-
-
-
-/*@media (min-width: 965px) {
-    .container,
-    .frontpage {
-        max-width: 1360px;
-        padding: 0 2rem;
-    }
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    body {
-        display: block;
-        font-size: 32px;
-    }
-
-    p {
-        font-size: 32px;
-    }
-}*/
