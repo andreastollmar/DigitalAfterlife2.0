@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat&family=Nunito&family=Nunito+Sans&family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -32,6 +33,7 @@
         </nav>
     </header>
     <div class="front-page d-flex flex-column min-vh-100">
+        <partial name="_CookieConsentPartial" />
         @RenderBody()
     </div>
 

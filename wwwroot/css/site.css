@@ -321,6 +321,15 @@ h6 {
     width: 400px;
 }*/
 
+.hero-img {
+    width: 1000px;
+}
+
+.feature-img,
+.step-img {
+    width: 600px;
+}
+
 
 /*RESPONSIVENESS*/
 
