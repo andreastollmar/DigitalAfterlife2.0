@@ -226,22 +226,55 @@ h6 {
 .feature-img,
 .step-img {
     width: 100%;
-    border: 2px solid red;
     height: auto;
 }
 
 .img-cont {
-    border: 2px solid green;
+}
+
+/*FOOTER*/
+.footer {
+    height: 150px;
+    background-color: black;
+    padding-top: 4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-manage {
+    height: 150px;
+    background-color: black;
+    padding-top: 4rem;
+    margin-top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.feature-section {
+    text-align: center;
+    margin: 40px 40px 48px;
+    padding: 48px 0px;
+}
+
+.review-section {
+    margin: 40px 40px 48px;
+    padding: 48px 0px;
 }
 
 
 /*EXTRA SMALL*/
 @media (min-width: 390px) and (max-width: 575.98px) {
 
+    .front-page {
+        padding: 24px 0px 0px;
+    }
+
     .hero-section {
         display: block;
         height: 50%;
-        border: 2px solid blue;
+
     }
 
     .hero-left {
@@ -250,20 +283,33 @@ h6 {
     }
 
     .hero-right {
+        text-align: center;
     }
 
     .hero-img {
         max-width: 80vw;
         height: auto;
-        z-index: -2;
-        margin-right: 150px;
+        margin: auto;
     }
 
     .feature-img,
     .step-img {
-        width: 250px;
+        width: 300px;
     }
+    
+    .header-h3{
+        font-size: 30px;
+    }
+    
 
+    .font-xl{
+        font-size: 14px;
+    }
+    
+    .footer{
+        height: 80px;
+        padding-top: 2rem;
+    }
 
 }
 
@@ -539,25 +585,7 @@ h6 {
 
 
 
-    /*FOOTER*/
-    .footer {
-        height: 150px;
-        background-color: black;
-        padding-top: 4rem;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .footer-manage {
-        height: 150px;
-        background-color: black;
-        padding-top: 4rem;
-        margin-top: 50px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
+    
 
 
 
