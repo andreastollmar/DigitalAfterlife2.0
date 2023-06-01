@@ -271,6 +271,11 @@ h6 {
     font-weight: bold;
 }
 
+.contact-section {
+    margin: 40px 40px 48px;
+    padding: 48px 0px;
+}
+
 
 /*EXTRA SMALL*/
 @media (min-width: 390px) and (max-width: 575.98px) {
@@ -331,6 +336,9 @@ h6 {
 
     .large-divider {
         width: 50vw;
+    }
+    .form-section {
+        width: 20vw;
     }
 }
 
@@ -393,6 +401,9 @@ h6 {
     .large-divider {
         width: 70vw;
     }
+    .form-section {
+        width: 20vw;
+    }
 }
 
 /*MEDIUM*/
@@ -450,6 +461,10 @@ h6 {
     .large-divider {
         width: 70vw;
     }
+    .form-section {
+        width: 20vw;
+    }
+    
 }
 
 /*Large*/
@@ -521,6 +536,10 @@ h6 {
     .large-divider {
         width: 70vw;
     }
+    .form-section {
+        width: 25vw;
+    }
+    
 }
 
 
@@ -590,7 +609,9 @@ h6 {
         width: 80vw;
     }
 
-
+    .form-section{
+        width: 25vw;    
+    }
 
 }
 /*NAV*/
