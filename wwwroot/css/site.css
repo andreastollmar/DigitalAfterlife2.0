@@ -171,7 +171,6 @@ h6 {
 }
 
 .hero-section {
-    position: relative;
     height: 1150px;
 }
 
@@ -316,13 +315,11 @@ h6 {
     right: 0;
 }
 
-/*.feature-img,
-.step-img {
-    width: 400px;
-}*/
-
 .hero-img {
-    width: 1000px;
+    
+    max-width: 1500px;
+    height: auto;
+    z-index: -2
 }
 
 .feature-img,
