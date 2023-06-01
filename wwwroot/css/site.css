@@ -38,13 +38,13 @@ div {
     display: block;
 }
 
-.font-l {
+/*.font-l {
     font-size: 16px;
-}
+}*/
 
 .font-xl,
 .text-xl {
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 p {
@@ -122,11 +122,15 @@ h6 {
     margin-bottom: 3rem !important;
 }
 
-.front-page header-h2 {
-    font-size: 48px;
-    line-height: 62px;
-    font-weight: 900;
+.front-page {
+    height: 100vh;
 }
+
+    .front-page header-h2 {
+        font-size: 48px;
+        line-height: 62px;
+        font-weight: 900;
+    }
 
 .header-h1 {
     margin: 0px 0px 24px;
@@ -225,7 +229,7 @@ h6 {
 
 .feature-img,
 .step-img {
-    width: 100%;
+    max-width: 25vw;
     height: auto;
 }
 
@@ -263,18 +267,22 @@ h6 {
     padding: 48px 0px;
 }
 
+.review-signature {
+    font-weight: bold;
+}
+
 
 /*EXTRA SMALL*/
 @media (min-width: 390px) and (max-width: 575.98px) {
 
     .front-page {
         padding: 24px 0px 0px;
+        height: 100%;
     }
 
     .hero-section {
         display: block;
-        height: 50%;
-
+        height: 30%;
     }
 
     .hero-left {
@@ -284,210 +292,204 @@ h6 {
 
     .hero-right {
         text-align: center;
+        margin-top: 50px;
     }
 
-    .hero-img {
-        max-width: 80vw;
-        height: auto;
-        margin: auto;
-    }
-
+    .hero-img,
     .feature-img,
     .step-img {
-        width: 300px;
-    }
-    
-    .header-h3{
-        font-size: 30px;
-    }
-    
-
-    .font-xl{
-        font-size: 14px;
-    }
-    
-    .footer{
-        height: 80px;
-        padding-top: 2rem;
-    }
-
-}
-
-/*SMALL*/
-@media (min-width: 576px) and (max-width: 767.98px) {
-
-    .hero-section {
-        display: block;
-        text-align: center;
-        height: 100px;
-        margin-bottom: 100px;
-    }
-
-    .hero-right {
-        display: block;
-    }
-
-    .hero-img {
         display: block;
         max-width: 100%;
-        margin: auto;
-    }
-
-
-    .feature-img,
-    .step-img {
-        max-width: 100%;
-    }
-
-    .header-h1 {
-        text-align: center;
     }
 
     .header-h2 {
-        font-size: 48px;
+        font-size: 2.2rem;
     }
 
     .header-h3 {
-        text-align: center;
+        font-size: 1.5rem;
         font-weight: bold;
     }
 
-    .img-cont {
-        text-align: center;
+    .header-h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .font-xl {
+        font-size: 1.1rem;
+    }
+
+    .footer {
+        height: 80px;
+        padding-top: 2rem;
     }
 
     .small-divider {
         width: 200px;
     }
+}
 
-    h1 {
-        font-size: 12px;
+/*SMALL*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .front-page {
+        padding: 24px 0px 0px;
+        height: 100%;
     }
 
-    p {
-        font-size: 14px;
+    .hero-section {
+        display: block;
         text-align: center;
     }
 
-    .sign {
-        font-weight: bold;
-        font-size: 16px;
+    .hero-p {
+        padding-inline: 5rem;
+        margin-bottom: 35px;
     }
 
-    .review-header-h2 {
-        font-size: 36px;
+    .hero-right {
+        display: block;
+        margin-top: 30px;
     }
+
+    .hero-img,
+    .feature-img,
+    .step-img {
+        display: block;
+        max-width: 100%; 
+    }
+
+    .header-h1 {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    .header-h2 {
+        font-size: 3rem;
+    }
+
+    .header-h3 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .img-cont {
+        text-align: center;
+    }
+
+    .small-divider {
+        width: 300px;
+    }
+
+    .font-xl {
+        font-size: 1.2rem;
+    }
+
 }
 
 /*MEDIUM*/
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-    .feature-img,
-    .step-img {
-        width: 310px;
-    }
-
-    .step-img {
-        width: 500px;
-    }
-
-    .hero-img {
-        width: 520px;
+    .front-page {
+        padding: 24px 0px 0px;
+        height: 100%;
     }
 
     .hero-section {
-        height: 800px;
-    }
-
-    .hero-right {
-        margin: auto;
-    }
-
-    .feature-section {
         display: block;
         text-align: center;
     }
 
-    .img-cont {
-        margin: auto;
+    .header-h1 {
+        font-size: 4rem;
+        font-weight: bold;
     }
 
-    .small-divider {
-        width: 350px;
-    }
-
-    .header-h1,
-    .hero-p {
-        text-align: center;
+    .header-h2 {
+        font-size: 3rem;
     }
 
     .header-h3 {
+        font-size: 2rem;
         font-weight: bold;
-        text-align: center;
-        font-size: 36px;
     }
 
-    .cta {
-        text-align: center;
-        margin: auto;
+    .font-xl {
+        font-size: 1.3rem;
+    }
+
+    .hero-p {
+        padding-inline: 5rem;
+        margin-bottom: 35px;
+    }
+
+    .hero-right {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .hero-img,
+    .feature-img,
+    .step-img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .small-divider {
+        width: 400px;
     }
 }
 
 /*Large*/
 @media (min-width: 992px) and (max-width: 1199.98) {
 
-
-    .hero-img {
-        width: 700px;
-        margin-right: 0;
-    }
-
-    .feature-img,
-    .step-img {
-        width: 400px;
+    .front-page {
+        padding: 24px 0px 0px;
+        height: 100%;
     }
 
 
-    .hero-section {
-        height: 950px;
+
+    .header-h1 {
+        font-size: 2rem;
+        font-weight: bold;
     }
 
-
-    .img-cont {
-        margin: auto;
-        text-align: center;
-    }
-
-    .small-divider {
-        width: 350px;
-    }
-
-    .hero-right {
-        margin: auto;
-    }
-
-    .header-h1,
-    .hero-p {
-        text-align: center;
-    }
-
-    .font-xl {
-        font-size: 14px;
-    }
-
-    .review-header-h2 {
-        font-weight: 500;
+    .header-h2 {
+        font-size: 3rem;
     }
 
     .header-h3 {
-        font-size: 30px;
-        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
     }
 
-    .cta {
-        text-align: center;
-        margin: auto;
+    .font-xl {
+        font-size: 1.3rem;
     }
+
+    .hero-p {
+        padding-inline: 5rem;
+        margin-bottom: 35px;
+    }
+
+    .hero-right {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .hero-img,
+    .feature-img,
+    .step-img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .small-divider {
+        width: 400px;
+    }
+
 }
 /*Extra large*/
 @media (min-width: 1200px) {
@@ -581,12 +583,4 @@ h6 {
     .card-registration .select-arrow {
         top: 13px;
     }
-
-
-
-
-    
-
-
-
 }
