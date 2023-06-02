@@ -220,22 +220,6 @@ h6 {
 }
 
 
-
-/*IMAGES*/
-/*.hero-img {
-    max-width: 50vw;
-    height: auto;
-    z-index: -2;
-    margin-right: 150px;
-}*/
-
-/*.feature-img,
-.step-img {
-    max-width: 25vw;
-    height: auto;
-}*/
-
-
 /*FOOTER*/
 .footer {
     height: 150px;
@@ -541,7 +525,6 @@ h6 {
     }
     
 }
-
 
 /*Extra large*/
 @media (min-width: 1200px) {

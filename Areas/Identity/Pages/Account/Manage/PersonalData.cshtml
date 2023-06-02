@@ -6,22 +6,23 @@
 }
 
 <h2 class="mb-3">@ViewData["Title"]</h2>
+<div class="container-fluid vh-100">
+    <div class="row">
+        <div class="col m-auto">
+            <p>Ditt konto innehåller personliga uppgifter som du har givit oss. <br />På den här sidan kan du ladda ner eller radera den datan.</p>
+            <form id="download-data" asp-page="DownloadPersonalData" method="post">
+                <button class="da-btn-primary" type="submit">Ladda ner</button>
+            </form>
+            <div class="container" style="width: 500px;">
+                <hr class="mb-5 mt-5" />
+            </div>
+            <h2>Varning!</h2>
+            <p>Kontot inte kommer att kunna återskapas vid borttagning av data. <br /> Om du tar bort den här datan kommer ditt konto försvinna permanent.</p>
 
-<div class="row">
-    <div class="col m-auto vh-100">
-        <p>Ditt konto innehåller personliga uppgifter som du har givit oss. <br />På den här sidan kan du ladda ner eller radera den datan.</p>
-        <form id="download-data" asp-page="DownloadPersonalData" method="post">
-            <button class="da-btn-primary" type="submit">Ladda ner</button>
-        </form>
-        <div class="container" style="width: 500px;">
-            <hr class="mb-5 mt-5" />
+            <p>
+                <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger mt-2">Ta bort</a>
+            </p>
         </div>
-        <h2>Varning!</h2>
-        <p>Kontot inte kommer att kunna återskapas vid borttagning av data. <br /> Om du tar bort den här datan kommer ditt konto försvinna permanent.</p>
-
-        <p>
-            <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger mt-2">Ta bort</a>
-        </p>
     </div>
 </div>
 
