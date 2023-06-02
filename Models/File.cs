@@ -6,8 +6,7 @@ namespace DigitalAfterlife2._0.Models
 {
     public class File
     {
-        public int Id { get; set; }
-        [Display(Name = "")]
+        public int Id { get; set; }        
         public string UploadedFile { get; set; }
         public DateTime DateOfUpload { get; set; }
         public virtual Perished? Perished { get; set; }

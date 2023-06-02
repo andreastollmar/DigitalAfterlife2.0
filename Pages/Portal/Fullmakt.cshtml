@@ -7,28 +7,23 @@
     var user = await UserManager.GetUserAsync(User);
 }
 
-<div class="container-fluid">
-    <h1 class="display-2 text-center">Fullmakt</h1>
-    <p class="fw-bold text-center">Ladda upp din fullmakt här</p>
+<div class="container-fluid text-center">
+    <h1 class="display-2">Fullmakt</h1>
+    <p class="fw-bold">Ladda upp din fullmakt här</p>
 
     <div class="row">
         <div class="col-4 m-auto">
             <form method="post" enctype="multipart/form-data">
 
-                <label asp-for="@Model.Files.UploadedFile" class="form-label"></label>
+                <label asp-for="@Model.Files.UploadedFile" class="form-label">Välj fil</label>
                 <input type="file" class="form-control" name="UploadedFullmakt" />
 
                 <div class="form-group mt-2">
                     <label asp-for="Perished.NextOfKinId" class="control-label">Välj person att koppla fullmakten till.</label>
                     <select asp-for="Perished.NextOfKinId" class="form-control" asp-items="ViewBag.PerishedId"></select>
                 </div>
-
                 <br />
-
-                <div class="text-center">
-                    <input type="submit" value="Ladda upp" class="btn btn-success mb-5" />
-                </div>
-
+                <input type="submit" value="Ladda upp" class="da-btn-primary mb-5" />
             </form>
         </div>
     </div>
@@ -43,16 +38,14 @@
         if (file.UploadedFile.Contains("fullmakt"))
         {
             <div class="row">
-                <div class="col-4">
-                    <h3>Ärendenummer: @file.PerishedId</h3>
+                <div class="col-11">
+                    <h3>Ärendenummer: @file.PerishedId (@Model.PerishedList.Where(x => x.Id == file.PerishedId).SingleOrDefault().FirstName @Model.PerishedList.Where(x => x.Id == file.PerishedId).SingleOrDefault().LastName - @Model.PerishedList.Where(x => x.Id == file.PerishedId).SingleOrDefault().BirthDate-@Model.PerishedList.Where(x => x.Id == file.PerishedId).SingleOrDefault().SocialSecurity)</h3>
                     <p>Filnamn: @file.UploadedFile</p>
                     <p>Datum för uppladdning: @file.DateOfUpload</p>
                 </div>
-                <div class="col-2">
-                    <a class="btn btn-primary mx-2" style="margin-top: 30px" asp-route-deleteId="@file.Id" asp-page="Deathcert">Ladda hem</a>
-                    <a class="btn btn-primary" style="margin-top: 30px" asp-route-deleteId="@file.Id" asp-page="Deathcert">Ta bort</a>
+                <div class="col-1 m-auto">                    
+                    <a class="da-btn-primary" style="margin-top: 30px" asp-route-deleteId="@file.Id" asp-page="Fullmakt">Ta bort</a>
                 </div>
-
                 <hr />
             </div>
         }

@@ -11,18 +11,21 @@
     <h1 class="display-2">Dödscertifikat</h1>
     <p class="fw-bold">Ladda upp den avlidnes dödscertifikat</p>
 
-    <form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-4 m-auto">
+            <form method="post" enctype="multipart/form-data">
+                <label asp-for="@Model.Files.UploadedFile" class="form-label">Välj fil</label>
+                <input type="file" class="form-control" name="UploadedDeathcert" />
+                <div class="form-group">
+                    <label asp-for="Perished.NextOfKinId" class="control-label">Välj person att koppla dödscertifikatet till</label>
+                    <select asp-for="Perished.NextOfKinId" class="form-control" asp-items="ViewBag.PerishedId"></select>
+                </div>
+                <br />
+                <input type="submit" value="Ladda upp" class="da-btn-primary" />
 
-        <label asp-for="@Model.Files.UploadedFile" class="form-label"></label>
-        <input type="file" class="form-control" name="UploadedDeathcert" />
-        <div class="form-group">
-            <label asp-for="Perished.NextOfKinId" class="control-label"></label>
-            <select asp-for="Perished.NextOfKinId" class="form-control" asp-items="ViewBag.PerishedId"></select>
+            </form>
         </div>
-        <br />
-        <input type="submit" value="Ladda upp" class="btn btn-success" />
-
-    </form>
+    </div>
 </div>
 @if (Model.FilesList.Count > 0)
 {
@@ -30,19 +33,20 @@
     <hr />
     foreach (var file in Model.FilesList)
     {
-        if(file.UploadedFile.Contains("deathcert"))
+        if (file.UploadedFile.Contains("deathcert"))
         {
             <div class="row">
-                <div class="col-6">
+                <div class="col-11">
+                    <h3>Ärendenummer: @file.PerishedId (@Model.PerishedList.Where(x => x.Id == file.PerishedId).SingleOrDefault().FirstName @Model.PerishedList.Where(x => x.Id == file.PerishedId).SingleOrDefault().LastName - @Model.PerishedList.Where(x => x.Id == file.PerishedId).SingleOrDefault().BirthDate-@Model.PerishedList.Where(x => x.Id == file.PerishedId).SingleOrDefault().SocialSecurity)</h3>
                     <p>Filnamn: @file.UploadedFile</p>
                     <p>Datum för uppladdning: @file.DateOfUpload</p>
                 </div>
-                <div class="col-6">
-                    <a class="btn btn-primary" asp-route-deleteId="@file.Id" asp-page="Deathcert">Ta bort</a>
+                <div class="col-1 m-auto">
+                    <a class="da-btn-primary" asp-route-deleteId="@file.Id" asp-page="Deathcert">Ta bort</a>
                 </div>
                 <hr />
             </div>
         }
-        
+
     }
 }
