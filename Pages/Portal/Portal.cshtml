@@ -5,6 +5,7 @@
 }
 @if (Model.PageNr == 1) //dokument
 {
+
     <h1 class="display-2 mb-3 text-center">Välj ett dokument att ladda upp</h1>
     <p class="text-center mb-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -27,9 +28,6 @@
     <a class="da-btn-primary" asp-page="deathcert">Ladda upp ett nytt certifikat</a>
     <a class="da-btn-primary" asp-page="#">Se ditt uppladdade certifikat</a>
     <hr class="mb-4 mt-4" style="width: 500px" />
-    <p class="fw-bold">Se ditt uppladdade certifikat  - SKA LIGGA I ETT IF-STATEMENT</p>
-    <a class="da-btn-primary" asp-page="#">Dödscertifikat</a>
-    <hr class="mb-4 mt-4" />
 
     <h2>Fullmakt</h2>
     <p>
@@ -40,28 +38,12 @@
         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-
     <p class="fw-bold">Välj att ladda hem en befintlig mall från våran sida eller ladda upp ett eget intyg.</p>
     <a class="da-btn-primary" asp-page="Fullmakt">Ladda upp en egen fullmakt</a>
+    <a class="da-btn-primary" asp-page="#">Se din uppladdade fullmakt</a>
     <hr class="mb-4 mt-4" style="width: 500px" />
-    <p class="fw-bold">Se din uppladdade fullmakt - SKA LIGGA I ETT IF-STATEMENT</p>
-    <a class="da-btn-primary" asp-page="#">Fullmakt</a>
 
-    <hr class="mb-4 mt-4" />
 
-    <h2>Mallar</h2>
-    <p>
-        Här laddar du upp en fullmakt, som ger oss möjlighet att agera i erat namn.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-
-    <p class="fw-bold">Välj ifall du vill ladda hem en befintlig mall av en fullmakt eller dödscertifikat.</p>
-    <a class="da-btn-primary" asp-page="#">Dödscertifikat</a>
-    <a class="da-btn-primary mx-2" asp-page="#">Fullmakt</a>
 }
 else //översikt
 {
@@ -82,7 +64,7 @@ else //översikt
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-lg-5">
                             <h2 class="fw-bold">@p.FirstName @p.LastName (@p.BirthDate-@p.SocialSecurity) </h2>
                         </div>
                         <div class="col m-auto">
