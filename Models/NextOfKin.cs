@@ -10,9 +10,9 @@ namespace DigitalAfterlife2._0.Models
         [Display(Name = "Efternamn")]
         public string LastName { get; set; }
         [Display(Name = "Kön")]
-        public string? Gender { get; set; } // 3 olika kön (man, kvinna, annat)
+        public string? Gender { get; set; } 
         [Display(Name = "Födelsedatum")]
-        public int BirthDate { get; set; } // 6 siffor (kolla regex lösning - xxxxxx-xxxx(6-4) eller xxxxxxxxxx(10))
+        public int BirthDate { get; set; } // 6 siffor 
         [Display(Name = "Födelsenummer")]
         public int SocialSecurity { get; set; } // 4 siffror
         [Display(Name = "Adress")]
@@ -22,9 +22,9 @@ namespace DigitalAfterlife2._0.Models
         [Display(Name = "Stad")]
         public string City { get; set; }
         [Display(Name = "Land")]
-        public string? Country { get; set; } // finns det en picker för land??
+        public string? Country { get; set; } 
         [Display(Name = "Telefon")]
-        public string PhoneNumber { get; set; } // kolla regex lösning (+46 lösning?)
+        public string PhoneNumber { get; set; } 
                                                 
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }

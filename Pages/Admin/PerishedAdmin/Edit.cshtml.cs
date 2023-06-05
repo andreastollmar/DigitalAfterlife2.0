@@ -39,9 +39,7 @@ namespace DigitalAfterlife2._0.Pages.Admin.PerishedAdmin
            ViewData["NextOfKinId"] = new SelectList(_context.NextOfKin, "Id", "FirstName");
             return Page();
         }
-
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
+       
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

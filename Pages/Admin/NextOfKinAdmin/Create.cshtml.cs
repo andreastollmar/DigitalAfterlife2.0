@@ -25,10 +25,9 @@ namespace DigitalAfterlife2._0.Pages.Admin.NextOfKinAdmin
         }
 
         [BindProperty]
-        public NextOfKin NextOfKin { get; set; } = default!;
-        
+        public NextOfKin NextOfKin { get; set; } = default!;        
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        
         public async Task<IActionResult> OnPostAsync()
         {
           if (!ModelState.IsValid || _context.NextOfKin == null || NextOfKin == null)

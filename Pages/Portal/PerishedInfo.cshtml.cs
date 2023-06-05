@@ -24,8 +24,7 @@ namespace DigitalAfterlife2._0.Pages.Portal
         [BindProperty]
         public Perished Perished { get; set; } = default!;
 
-
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid || _context.Perished == null || Perished == null)

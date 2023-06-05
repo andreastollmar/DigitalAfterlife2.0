@@ -14,8 +14,7 @@ namespace DigitalAfterlife2._0.Pages.Portal
         public FullmaktModel(Data.ApplicationDbContext context)
         {
             _context = context;
-        }
-        // Snygga till allt här och deathcert sen
+        }        
 
         [BindProperty]
         public IFormFile UploadedFullmakt { get; set; }
